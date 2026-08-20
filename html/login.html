@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Medical Services</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon"/>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css" />
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="../assets/icons/fontawesome/css/all.min.css" />
+    <!-- Main Style -->
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <!-- Login Style -->
+    <link rel="stylesheet" href="../assets/css/login.css" />
+  </head>
+  <body>
+    <div id="pageLoader"><div class="loader-spinner"></div></div>
+    <!-- Start Navbar -->
+    <nav class="navbar navbar-expand-lg" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">
+          <img
+            src="../assets/images/logo.png"
+            alt="MedStar Hospital"
+            class="logo"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+          aria-controls="navMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/doctors.html">Doctors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/blogs.html">Blogs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/contact.html">Contact</a>
+            </li>
+            <li class="nav-item search-item-mobile d-lg-none">
+              <form class="mobile-search-form" id="mobileSearchForm">
+                <input
+                  type="search"
+                  id="mobileSiteSearch"
+                  placeholder="Search..."
+                  autocomplete="off"
+                  ا
+                />
+                <button type="submit" aria-label="Search">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </form>
+            </li>
+            <li class="nav-item d-lg-none" id="navLoginMobileWrap">
+              <a
+                href="../html/login.html"
+                class="btn btn-primary login-btn-mobile"
+                >Login</a
+              >
+            </li>
+            <li class="nav-item d-lg-none d-none" id="navUserMobileWrap">
+              <a
+                href="#"
+                class="btn btn-outline-primary w-100 mb-2"
+                id="navUserLinkMobile"
+              ></a>
+              <button
+                type="button"
+                class="btn btn-outline-secondary w-100"
+                id="navLogoutBtnMobile"
+              >
+                Logout
+              </button>
+            </li>
+          </ul>
+          <div class="nav-extra d-none d-lg-flex align-items-center">
+            <button
+              type="button"
+              class="search-btn"
+              id="searchButton"
+              aria-label="Open search"
+            >
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <a
+              href="../html/login.html"
+              class="btn btn-primary login-btn"
+              id="navLoginBtn"
+              >Login</a
+            >
+            <div class="nav-user d-none" id="navUserDesktop">
+              <a href="#" class="nav-user-link" id="navUserLink"></a>
+              <button
+                type="button"
+                class="btn btn-outline-secondary btn-sm"
+                id="navLogoutBtn"
+              >
+                Logout
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+    <!-- Start Search Box -->
+    <div class="search-box" id="searchBox">
+      <form id="searchForm">
+        <input
+          type="search"
+          id="siteSearch"
+          placeholder="Search..."
+          autocomplete="off"
+        />
+        <button type="submit" aria-label="Search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+    </div>
+    <!-- End Search Box -->
+    <!-- Start Login/Signup -->
+    <section id="auth">
+      <div class="container">
+        <div class="auth-card">
+          <div class="auth-tabs">
+            <button type="button" class="auth-tab active" id="tabSignIn">
+              Sign In
+            </button>
+            <button type="button" class="auth-tab" id="tabSignUp">
+              Sign Up
+            </button>
+            <span class="auth-tab-indicator" id="authTabIndicator"></span>
+          </div>
+          <div id="authMsg" class="auth-msg"></div>
+          <!-- Sign In Form -->
+          <form id="signInForm" class="auth-form" novalidate autocomplete="off">
+            <h2>Welcome Back</h2>
+            <p class="auth-sub">Sign in to manage your appointments.</p>
+            <div class="mb-3">
+              <input
+                type="email"
+                class="form-control"
+                id="signInEmail"
+                placeholder="Email"
+                required
+              />
+              <div class="field-error" id="errSignInEmail"></div>
+            </div>
+            <div class="mb-3">
+              <input
+                type="password"
+                class="form-control"
+                id="signInPassword"
+                placeholder="Password"
+                autocomplete="new-password"
+                required
+                minlength="6"
+              />
+              <div class="field-error" id="errSignInPassword"></div>
+            </div>
+            <button type="submit" class="btn btn-primary auth-btn">
+              Sign In
+            </button>
+            <p class="auth-switch">
+              Don't have an account?
+              <a href="#" id="goToSignUp">Sign Up</a>
+            </p>
+          </form>
+          <!-- Sign Up Form -->
+          <form
+            id="signUpForm"
+            class="auth-form d-none"
+            novalidate
+            autocomplete="off"
+          >
+            <h2>Create Account</h2>
+            <p class="auth-sub">Join us to book appointments faster.</p>
+            <div class="mb-3 role-select" id="roleSelect">
+              <label class="role-option">
+                <input type="radio" name="signUpRole" value="patient" checked />
+                <span><i class="fa-solid fa-user"></i> Patient</span>
+              </label>
+              <label class="role-option">
+                <input type="radio" name="signUpRole" value="doctor" />
+                <span><i class="fa-solid fa-user-doctor"></i> Doctor</span>
+              </label>
+            </div>
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="signUpName"
+                placeholder="Full Name"
+                required
+                minlength="3"
+              />
+              <div class="field-error" id="errSignUpName"></div>
+            </div>
+            <div class="mb-3">
+              <input
+                type="email"
+                class="form-control"
+                id="signUpEmail"
+                placeholder="Email"
+                required
+              />
+              <div class="field-error" id="errSignUpEmail"></div>
+            </div>
+            <div class="mb-3">
+              <input
+                type="password"
+                class="form-control"
+                id="signUpPassword"
+                placeholder="Password"
+                autocomplete="new-password"
+                required
+                minlength="6"
+              />
+              <div class="pw-strength" id="pwStrength">
+                <span class="pw-strength-bar"><i id="pwStrengthFill"></i></span>
+                <span class="pw-strength-label" id="pwStrengthLabel"></span>
+              </div>
+              <div class="field-error" id="errSignUpPassword"></div>
+            </div>
+            <div class="mb-3">
+              <input
+                type="password"
+                class="form-control"
+                id="signUpConfirm"
+                placeholder="Confirm Password"
+                autocomplete="new-password"
+                required
+              />
+              <div class="field-error" id="errSignUpConfirm"></div>
+            </div>
+            <button type="submit" class="btn btn-primary auth-btn">
+              Create Account
+            </button>
+            <p class="auth-switch">
+              Already have an account?
+              <a href="#" id="goToSignIn">Sign In</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- End Login/Signup -->
+    <!-- Start Footer -->
+    <footer id="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row gy-5">
+            <div class="col-md-6 col-lg-3">
+              <h2>About Us</h2>
+              <hr />
+              <p>
+                Medical Services has been serving our community with
+                trusted, patient-first medical care across every major
+                specialty.
+              </p>
+              <div class="social">
+                <a href="https://www.facebook.com/" target="_blank" aria-label="visit facebook"
+                  ><i class="fa-brands fa-facebook-f"></i
+                ></a>
+                <a href="https://www.google.com/" target="_blank" aria-label="visit google"
+                  ><i class="fa-brands fa-google-plus-g"></i
+                ></a>
+                <a href="https://x.com/" target="_blank" aria-label="visit twitter"
+                  ><i class="fa-brands fa-twitter"></i
+                ></a>
+                <a href="https://vimeo.com/" target="_blank" aria-label="visit vimeo"
+                  ><i class="fa-brands fa-vimeo-v"></i
+                ></a>
+                <a href="https://www.pinterest.com/" target="_blank" aria-label="visit pinterest"
+                  ><i class="fa-brands fa-pinterest-p"></i
+                ></a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <h2>Quick Links</h2>
+              <hr />
+              <ul class="footer-links">
+                <li>
+                  <a href="../index.html"
+                    ><i class="fa-solid fa-caret-right"></i> Home</a
+                  >
+                </li>
+                <li>
+                  <a href="../html/about.html"
+                    ><i class="fa-solid fa-caret-right"></i> About</a
+                  >
+                </li>
+                <li>
+                  <a href="../html/services.html"
+                    ><i class="fa-solid fa-caret-right"></i> Services</a
+                  >
+                </li>
+                <li>
+                  <a href="../html/doctors.html"
+                    ><i class="fa-solid fa-caret-right"></i> Doctors</a
+                  >
+                </li>
+                <li>
+                  <a href="../html/blogs.html"
+                    ><i class="fa-solid fa-caret-right"></i> Blogs</a
+                  >
+                </li>
+                <li>
+                  <a href="../html/contact.html"
+                    ><i class="fa-solid fa-caret-right"></i> Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <h2>Open Hours</h2>
+              <hr />
+              <p>
+                We're here when you need us. Emergency services remain open
+                24 hours a day, every day of the week.
+              </p>
+              <ul class="footer-links no-icon">
+                <li>Monday - Thursday 8:00 - 20:00</li>
+                <li>Saturday 9:00 - 18:00</li>
+                <li>Friday 9:00 - 15:00</li>
+              </ul>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <h2>Newsletter</h2>
+              <hr />
+              <p>
+                Subscribe for the latest hospital news and health advice,
+                straight to your inbox.
+              </p>
+              <form class="footer-newsletter-form" id="footerNewsletterForm" novalidate>
+                <input
+                  type="email"
+                  name="Email"
+                  id="footerNewsletterEmail"
+                  placeholder="Email Address"
+                  required
+                />
+                <button type="submit" aria-label="send mail">
+                  <i class="fa-solid fa-paper-plane"></i>
+                </button>
+              </form>
+              <p class="form-msg" id="footerNewsletterMsg"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>
+          &copy; All Rights Reserved 2026 | Made By<br />
+          <a
+            href="https://www.linkedin.com/in/hedra-victor-4b333033a"
+            target="_blank"
+            >Eng.Hedra Victor</a
+          >
+          & <a href="https://www.linkedin.com/in/arsany-amir-0132173a7" target="_blank">Eng.Arsany Amir</a> &
+          <a
+            href="https://www.linkedin.com/in/persis-magdy-54658740b"
+            target="_blank"
+            >Eng.Persis Magdy</a
+          >
+          & <a href="https://www.linkedin.com/in/marwan-mokhtar-037301229/" target="_blank">Eng.Marwan Mokhtar</a> &
+          <a href="https://eg.linkedin.com/in/ashraf-elhamady-b03962341" target="_blank">Eng.Ashraf Elhamady</a>
+        </p>
+      </div>
+    </footer>
+    <!-- End Footer -->
+    <!-- Back To Top -->
+    <button type="button" id="backToTop" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <!-- Bootstrap JS -->
+    <script src="../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+    <script src="../assets/js/firebase-config.js"></script>
+    <script src="../assets/js/nav-auth.js"></script>
+    <script src="../assets/js/transition.js"></script>
+    <!-- Main JS (shared nav, search, back-to-top, reveal) -->
+    <script src="../assets/js/main.js"></script>
+    <!-- Login JS -->
+    <script src="../assets/js/login.js"></script>
+  </body>
+</html>

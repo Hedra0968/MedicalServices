@@ -1,0 +1,398 @@
+/* Page Loader CSS */
+#pageLoader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition:
+    opacity 0.5s ease,
+    visibility 0.5s ease;
+}
+
+#pageLoader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader-spinner {
+  width: 34px;
+  height: 34px;
+  border: 3px solid #f3f3f3;
+  border-top-color: #1a7bd1;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.7s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-padding {
+  padding: 6rem 0;
+}
+
+.section-padding-sm {
+  padding: 4rem 0;
+}
+
+.title {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.title h2 {
+  font-size: 32px;
+}
+
+.title img {
+  margin: 20px 0;
+}
+
+.title p {
+  font-size: 16px;
+}
+
+.short-hr {
+  width: 60px;
+  height: 3px;
+  background-color: var(--light-blue);
+  border: none;
+  margin: 10px 0 20px;
+}
+
+#about-intro h2 {
+  margin-top: 50px;
+}
+
+#about-intro h3 {
+  font-size: 25px;
+}
+
+#about-intro p {
+  font-size: 16px;
+}
+
+.check-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.check-list li {
+  color: var(--light-gray);
+  margin-bottom: 8px;
+}
+
+.check-list li i {
+  color: var(--light-blue);
+  margin-right: 5px;
+}
+
+#info {
+  background:
+    linear-gradient(rgba(26, 123, 209, 0.85), rgba(26, 123, 209, 0.85)),
+    url("../images/info-bg.png") no-repeat center center/cover;
+}
+
+.info-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+
+.info-box i {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.info-box .counter {
+  font-size: 30px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.info-box .counter-plus {
+  font-size: 26px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.info-box p {
+  color: #fff;
+  margin-top: 5px;
+}
+
+.help-row .col-md-4 h3 {
+  margin: 20px 0 10px;
+}
+
+.help-row .col-md-4 i {
+  width: 64px;
+  height: 64px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(26, 123, 209, 0.1);
+  font-size: 26px;
+  color: var(--light-blue);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.help-row .col-md-4:hover i {
+  background-color: var(--light-blue);
+  color: #fff;
+}
+
+.help-box {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.help-box:hover {
+  transform: translateY(-3px);
+}
+
+.help-desc {
+  display: none;
+  margin-top: 10px;
+}
+
+.help-desc.active {
+  display: block !important;
+}
+
+.journey-line {
+  position: relative;
+  max-width: 750px;
+  margin: 0 auto;
+  padding-left: 30px;
+}
+
+.journey-line::before {
+  content: "";
+  position: absolute;
+  left: 29px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background-color: rgba(26, 123, 209, 0.25);
+}
+
+.journey-item {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  padding-bottom: 40px;
+}
+
+.journey-item:last-child {
+  padding-bottom: 0;
+}
+
+.journey-dot {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--light-blue);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  z-index: 1;
+  margin-left: -30px;
+}
+
+.journey-year {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--light-blue);
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.journey-content h3 {
+  font-size: 19px;
+  margin-bottom: 6px;
+}
+
+.journey-content p {
+  font-size: 15px;
+  margin: 0;
+}
+
+#fun-facts {
+  background-color: var(--bg-newsletter);
+}
+
+.fun-fact-badge {
+  height: 100%;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 25px 18px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.fun-fact-badge i {
+  font-size: 26px;
+  color: var(--light-blue);
+  margin-bottom: 12px;
+}
+
+.fun-fact-badge p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.fun-fact-badge strong {
+  color: var(--dark-gray);
+}
+
+.vibe-card {
+  height: 100%;
+  text-align: center;
+  padding: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.vibe-card:hover {
+  transform: translateY(-3px);
+}
+
+.vibe-card i {
+  width: 64px;
+  height: 64px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(26, 123, 209, 0.1);
+  color: var(--light-blue);
+  font-size: 24px;
+  margin-bottom: 18px;
+  transition: all 0.3s ease;
+}
+
+.vibe-card:hover i {
+  background-color: var(--light-blue);
+  color: #fff;
+}
+
+.vibe-card h3 {
+  font-size: 19px;
+  margin-bottom: 8px;
+}
+
+.vibe-desc {
+  display: none;
+  font-size: 15px;
+}
+
+.vibe-card.active .vibe-desc {
+  display: block;
+}
+
+#call {
+  background:
+    linear-gradient(rgba(44, 45, 63, 0.75), rgba(44, 45, 63, 0.75)),
+    url("../images/call-bg.png") no-repeat center center/cover;
+  padding: 6rem 0;
+}
+
+#call h2 {
+  color: #fff;
+  font-size: 35px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+#call p {
+  color: #fff;
+  max-width: 600px;
+  margin: 20px auto 25px;
+}
+
+#call .btn {
+  padding: 10px 25px;
+  margin: 0 8px;
+}
+
+.btn-third {
+  background-color: #fff;
+  color: var(--light-blue);
+  border: 1px solid #fff;
+}
+
+.btn-third:hover {
+  background-color: var(--light-blue);
+  color: #fff;
+}
+
+.btn-forth {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.btn-forth:hover {
+  background-color: #fff;
+  color: var(--dark-gray);
+}
+
+@media (max-width: 767px) {
+  .journey-line {
+    padding-left: 20px;
+  }
+
+  .journey-line::before {
+    left: 19px;
+  }
+
+  .journey-dot {
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
+    margin-left: -20px;
+  }
+
+  .section-padding {
+    padding: 4rem 0;
+  }
+
+  .title h2 {
+    font-size: 24px;
+  }
+
+  #call h2 {
+    font-size: 24px;
+  }
+}

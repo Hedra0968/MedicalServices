@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service Details - Neurology</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../../assets/images/favicon.png" type="image/x-icon"/>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css"/>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="../../assets/icons/fontawesome/css/all.min.css"/>
+    <!-- Style -->
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+    <link rel="stylesheet" href="../../assets/css/services-details.css" />
+  </head>
+  <body>
+    <div id="pageLoader"><div class="loader-spinner"></div></div>
+    <!-- Start Navbar -->
+    <nav class="navbar navbar-expand-lg" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="../../index.html">
+          <img
+            src="../../assets/images/logo.png"
+            alt="MedStar Hospital"
+            class="logo"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+          aria-controls="navMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="../../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../doctors.html">Doctors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../blogs.html">Blogs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../contact.html">Contact</a>
+            </li>
+            <li class="nav-item search-item-mobile d-lg-none">
+              <form class="mobile-search-form" id="mobileSearchForm">
+                <input
+                  type="search"
+                  id="mobileSiteSearch"
+                  placeholder="Search..."
+                  autocomplete="off"
+                />
+                <button type="submit" aria-label="Search">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </form>
+            </li>
+            <li class="nav-item d-lg-none" id="navLoginMobileWrap">
+              <a href="../login.html" class="btn btn-primary login-btn-mobile"
+                >Login</a
+              >
+            </li>
+            <li class="nav-item d-lg-none d-none" id="navUserMobileWrap">
+              <a
+                href="#"
+                class="btn btn-outline-primary w-100 mb-2"
+                id="navUserLinkMobile"
+              ></a>
+              <button
+                type="button"
+                class="btn btn-outline-secondary w-100"
+                id="navLogoutBtnMobile"
+              >
+                Logout
+              </button>
+            </li>
+          </ul>
+          <div class="nav-extra d-none d-lg-flex align-items-center">
+            <button
+              type="button"
+              class="search-btn"
+              id="searchButton"
+              aria-label="Open search"
+            >
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <a
+              href="../login.html"
+              class="btn btn-primary login-btn"
+              id="navLoginBtn"
+              >Login</a
+            >
+            <div class="nav-user d-none" id="navUserDesktop">
+              <a href="#" class="nav-user-link" id="navUserLink"></a>
+              <button
+                type="button"
+                class="btn btn-outline-secondary btn-sm"
+                id="navLogoutBtn"
+              >
+                Logout
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+    <!-- Start Search Box -->
+    <div class="search-box" id="searchBox">
+      <form id="searchForm">
+        <input
+          type="search"
+          id="siteSearch"
+          placeholder="Search..."
+          autocomplete="off"
+        />
+        <button type="submit" aria-label="Search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+    </div>
+    <!-- End Search Box -->
+    <!-- details section -->
+    <section id="sec1-main">
+      <div class="container-custom reveal">
+        <div class="wrapper-custom reveal">
+          <div class="header-box reveal">
+            <div class="badge-custom reveal">GENERAL TREATMENT</div>
+            <h1 class="title-custom reveal">
+              Comprehensive General Medical Services
+            </h1>
+            <p class="subtitle-custom reveal">
+              Expert diagnosis, routine checkups, and ongoing care for everyday
+              health concerns, handled by our dedicated general practitioners
+              with a focus on your long-term well-being.
+            </p>
+          </div>
+          <div class="row-custom">
+            <div class="col-left reveal">
+              <div class="item-box">
+                <div class="icon-box reveal">🩺</div>
+                <div class="text-box reveal">
+                  <h3>Routine Checkups & Screening</h3>
+                  <p>
+                    Our general practitioners provide comprehensive annual
+                    physical exams, blood work analysis, and preventive health
+                    screenings to detect potential issues early and keep you
+                    healthy.
+                  </p>
+                </div>
+              </div>
+              <div class="item-box">
+                <div class="icon-box reveal">💊</div>
+                <div class="text-box reveal">
+                  <h3>Diagnosis & Treatment</h3>
+                  <p>
+                    We diagnose and treat a wide range of common medical
+                    conditions including infections, chronic diseases, and minor
+                    injuries. Your care plan is always tailored to your specific
+                    needs.
+                  </p>
+                </div>
+              </div>
+              <div class="item-box">
+                <div class="icon-box reveal">🫀</div>
+                <div class="text-box reveal">
+                  <h3>Follow-Up & Chronic Care</h3>
+                  <p>
+                    We provide ongoing management for chronic conditions such as
+                    diabetes, hypertension, and heart disease, ensuring you
+                    receive consistent, high-quality care every step of the way.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-right reveal">
+              <img src="../../assets/images/1SD.jpg" alt="General Treatment" />
+              <div class="stats-box reveal">
+                <div class="stat-item">
+                  <div class="stat-num reveal">98%</div>
+                  <div class="stat-label">Patient Satisfaction</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-num reveal">24/7</div>
+                  <div class="stat-label">Walk-in Available</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bottom-box">
+            <div class="bottom-left reveal">
+              <h2>Why Choose Our General Practice</h2>
+              <p>
+                Our general medical team is the foundation of your healthcare
+                journey. We believe in building lasting relationships with our
+                patients, offering personalized attention and trusted medical
+                advice for every stage of life.
+              </p>
+            </div>
+            <div class="bottom-right reveal">
+              <h3>Common Conditions We Treat</h3>
+              <div class="tags-box">
+                <div class="tag-item reveal">Seasonal Flu & Colds</div>
+                <div class="tag-item reveal">Chronic Disease Management</div>
+                <div class="tag-item reveal">Minor Injuries</div>
+                <div class="tag-item reveal">Vaccinations</div>
+                <div class="tag-item reveal">Allergy Testing</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+     <!-- Start Footer -->
+    <footer id="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row gy-5">
+            <div class="col-md-6 col-lg-3">
+              <h2>About Us</h2>
+              <hr />
+              <p>
+                Medical Services has been serving our community with
+                trusted, patient-first medical care across every major
+                specialty.
+              </p>
+              <div class="social">
+                <a href="https://www.facebook.com/" target="_blank" aria-label="visit facebook"
+                  ><i class="fa-brands fa-facebook-f"></i
+                ></a>
+                <a href="https://www.google.com/" target="_blank" aria-label="visit google"
+                  ><i class="fa-brands fa-google-plus-g"></i
+                ></a>
+                <a href="https://x.com/" target="_blank" aria-label="visit twitter"
+                  ><i class="fa-brands fa-twitter"></i
+                ></a>
+                <a href="https://vimeo.com/" target="_blank" aria-label="visit vimeo"
+                  ><i class="fa-brands fa-vimeo-v"></i
+                ></a>
+                <a href="https://www.pinterest.com/" target="_blank" aria-label="visit pinterest"
+                  ><i class="fa-brands fa-pinterest-p"></i
+                ></a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <h2>Quick Links</h2>
+              <hr />
+              <ul class="footer-links">
+                <li>
+                  <a href="../../index.html"
+                    ><i class="fa-solid fa-caret-right"></i> Home</a
+                  >
+                </li>
+                <li>
+                  <a href="../about.html"
+                    ><i class="fa-solid fa-caret-right"></i> About</a
+                  >
+                </li>
+                <li>
+                  <a href="../services.html"
+                    ><i class="fa-solid fa-caret-right"></i> Services</a
+                  >
+                </li>
+                <li>
+                  <a href="../doctors.html"
+                    ><i class="fa-solid fa-caret-right"></i> Doctors</a
+                  >
+                </li>
+                <li>
+                  <a href="../blogs.html"
+                    ><i class="fa-solid fa-caret-right"></i> Blogs</a
+                  >
+                </li>
+                <li>
+                  <a href="../contact.html"
+                    ><i class="fa-solid fa-caret-right"></i> Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <h2>Open Hours</h2>
+              <hr />
+              <p>
+                We're here when you need us. Emergency services remain open
+                24 hours a day, every day of the week.
+              </p>
+              <ul class="footer-links no-icon">
+                <li>Monday - Thursday 8:00 - 20:00</li>
+                <li>Saturday 9:00 - 18:00</li>
+                <li>Friday 9:00 - 15:00</li>
+              </ul>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <h2>Newsletter</h2>
+              <hr />
+              <p>
+                Subscribe for the latest hospital news and health advice,
+                straight to your inbox.
+              </p>
+              <form class="footer-newsletter-form" id="footerNewsletterForm" novalidate>
+                <input
+                  type="email"
+                  name="Email"
+                  id="footerNewsletterEmail"
+                  placeholder="Email Address"
+                  required
+                />
+                <button type="submit" aria-label="send mail">
+                  <i class="fa-solid fa-paper-plane"></i>
+                </button>
+              </form>
+              <p class="form-msg" id="footerNewsletterMsg"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>
+          &copy; All Rights Reserved 2026 | Made By<br />
+          <a
+            href="https://www.linkedin.com/in/hedra-victor-4b333033a"
+            target="_blank"
+            >Eng.Hedra Victor</a
+          >
+          & <a href="https://www.linkedin.com/in/arsany-amir-0132173a7" target="_blank">Eng.Arsany Amir</a> &
+          <a
+            href="https://www.linkedin.com/in/persis-magdy-54658740b"
+            target="_blank"
+            >Eng.Persis Magdy</a
+          >
+          & <a href="https://www.linkedin.com/in/marwan-mokhtar-037301229/" target="_blank">Eng.Marwan Mokhtar</a> &
+          <a href="https://eg.linkedin.com/in/ashraf-elhamady-b03962341" target="_blank">Eng.Ashraf Elhamady</a>
+        </p>
+      </div>
+    </footer>
+    <!-- End Footer -->
+    <!-- Back To Top -->
+    <button type="button" id="backToTop" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <!-- Bootstrap JS -->
+    <script src="../../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+    <script src="../../assets/js/firebase-config.js"></script>
+    <script src="../../assets/js/nav-auth.js"></script>
+    <script src="../../assets/js/transition.js"></script>
+    <!-- Main JS -->
+    <script src="../../assets/js/main.js"></script>
+    <!-- JS -->
+    <script src="../../assets/js/services.js"></script>
+    <script src="../../assets/js/services-details.js"></script>
+  </body>
+</html>

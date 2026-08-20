@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctor Profile - Medical Services</title>
+    <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/icons/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/profile.css" />
+  </head>
+  <body>
+    <div id="pageLoader"><div class="loader-spinner"></div></div>
+    <nav class="navbar navbar-expand-lg" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../assets/images/logo.png" alt="Medical Services" class="logo" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="../html/about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="../html/services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="../html/doctors.html">Doctors</a></li>
+            <li class="nav-item"><a class="nav-link" href="../html/blogs.html">Blogs</a></li>
+            <li class="nav-item"><a class="nav-link" href="../html/contact.html">Contact</a></li>
+            <li class="nav-item search-item-mobile d-lg-none">
+              <form class="mobile-search-form" id="mobileSearchForm">
+                <input type="search" id="mobileSiteSearch" placeholder="Search..." autocomplete="off" />
+                <button type="submit" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+              </form>
+            </li>
+            <li class="nav-item d-lg-none" id="navLoginMobileWrap">
+              <a href="../html/login.html" class="btn btn-primary login-btn-mobile">Login</a>
+            </li>
+            <li class="nav-item d-lg-none d-none" id="navUserMobileWrap">
+              <a href="#" class="btn btn-outline-primary w-100 mb-2" id="navUserLinkMobile"></a>
+              <button type="button" class="btn btn-outline-secondary w-100" id="navLogoutBtnMobile">Logout</button>
+            </li>
+          </ul>
+          <div class="nav-extra d-none d-lg-flex align-items-center">
+            <button type="button" class="search-btn" id="searchButton" aria-label="Open search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <a href="../html/login.html" class="btn btn-primary login-btn" id="navLoginBtn">Login</a>
+            <div class="nav-user d-none" id="navUserDesktop">
+              <a href="#" class="nav-user-link" id="navUserLink"></a>
+              <button type="button" class="btn btn-outline-secondary btn-sm" id="navLogoutBtn">Logout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="search-box" id="searchBox">
+      <form id="searchForm">
+        <input type="search" id="siteSearch" placeholder="Search..." autocomplete="off" />
+        <button type="submit" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+    </div>
+    <main>
+      <section id="profileHero">
+        <div class="container">
+          <div class="profile-head reveal">
+            <div class="profile-avatar"><i class="fa-solid fa-user-doctor"></i></div>
+            <div>
+              <h1 id="profileName">Loading...</h1>
+              <p id="profileEmail"></p>
+              <span class="role-badge">Doctor</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="profileBody" class="section-padding-sm">
+        <div class="container">
+          <div class="row gy-4">
+            <div class="col-lg-8 reveal">
+              <h2 class="profile-h2">Appointments Booked With You</h2>
+              <p class="booking-note">Matched by the doctor name on your account.</p>
+              <div id="bookingsMsg" class="form-msg"></div>
+              <div id="bookingsList" class="bookings-list"></div>
+            </div>
+            <div class="col-lg-4 reveal">
+              <div class="danger-card">
+                <h2 class="profile-h2">Account</h2>
+                <p>Deleting your account permanently removes your login and profile data. This cannot be undone.</p>
+                <button type="button" class="btn btn-outline-danger" id="deleteAccountBtn">Delete My Account</button>
+                <p class="field-error" id="deleteAccountMsg"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+     <!-- Start Footer -->
+    <footer id="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row gy-5">
+            <div class="col-md-6 col-lg-3">
+              <h2>About Us</h2>
+              <hr />
+              <p>
+                Medical Services has been serving our community with
+                trusted, patient-first medical care across every major
+                specialty.
+              </p>
+              <div class="social">
+                <a href="https://www.facebook.com/" target="_blank" aria-label="visit facebook"
+                  ><i class="fa-brands fa-facebook-f"></i
+                ></a>
+                <a href="https://www.google.com/" target="_blank" aria-label="visit google"
+                  ><i class="fa-brands fa-google-plus-g"></i
+                ></a>
+                <a href="https://x.com/" target="_blank" aria-label="visit twitter"
+                  ><i class="fa-brands fa-twitter"></i
+                ></a>
+                <a href="https://vimeo.com/" target="_blank" aria-label="visit vimeo"
+                  ><i class="fa-brands fa-vimeo-v"></i
+                ></a>
+                <a href="https://www.pinterest.com/" target="_blank" aria-label="visit pinterest"
+                  ><i class="fa-brands fa-pinterest-p"></i
+                ></a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <h2>Quick Links</h2>
+              <hr />
+              <ul class="footer-links">
+                <li>
+                  <a href="../index.html"
+                    ><i class="fa-solid fa-caret-right"></i> Home</a
+                  >
+                </li>
+                <li>
+                  <a href="../html/about.html"
+                    ><i class="fa-solid fa-caret-right"></i> About</a
+                  >
+                </li>
+                <li>
+                  <a href="../html/services.html"
+                    ><i class="fa-solid fa-caret-right"></i> Services</a
+                  >
+                </li>
+                <li>
+                  <a href="../html/doctors.html"
+                    ><i class="fa-solid fa-caret-right"></i> Doctors</a
+                  >
+                </li>
+                <li>
+                  <a href="../html/blogs.html"
+                    ><i class="fa-solid fa-caret-right"></i> Blogs</a
+                  >
+                </li>
+                <li>
+                  <a href="../html/contact.html"
+                    ><i class="fa-solid fa-caret-right"></i> Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <h2>Open Hours</h2>
+              <hr />
+              <p>
+                We're here when you need us. Emergency services remain open
+                24 hours a day, every day of the week.
+              </p>
+              <ul class="footer-links no-icon">
+                <li>Monday - Thursday 8:00 - 20:00</li>
+                <li>Saturday 9:00 - 18:00</li>
+                <li>Friday 9:00 - 15:00</li>
+              </ul>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <h2>Newsletter</h2>
+              <hr />
+              <p>
+                Subscribe for the latest hospital news and health advice,
+                straight to your inbox.
+              </p>
+              <form class="footer-newsletter-form" id="footerNewsletterForm" novalidate>
+                <input
+                  type="email"
+                  name="Email"
+                  id="footerNewsletterEmail"
+                  placeholder="Email Address"
+                  required
+                />
+                <button type="submit" aria-label="send mail">
+                  <i class="fa-solid fa-paper-plane"></i>
+                </button>
+              </form>
+              <p class="form-msg" id="footerNewsletterMsg"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>
+          &copy; All Rights Reserved 2026 | Made By<br />
+          <a
+            href="https://www.linkedin.com/in/hedra-victor-4b333033a"
+            target="_blank"
+            >Eng.Hedra Victor</a
+          >
+          & <a href="https://www.linkedin.com/in/arsany-amir-0132173a7" target="_blank">Eng.Arsany Amir</a> &
+          <a
+            href="https://www.linkedin.com/in/persis-magdy-54658740b"
+            target="_blank"
+            >Eng.Persis Magdy</a
+          >
+          & <a href="https://www.linkedin.com/in/marwan-mokhtar-037301229/" target="_blank">Eng.Marwan Mokhtar</a> &
+          <a href="https://eg.linkedin.com/in/ashraf-elhamady-b03962341" target="_blank">Eng.Ashraf Elhamady</a>
+        </p>
+      </div>
+    </footer>
+    <!-- End Footer -->
+    <button type="button" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <script src="../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+    <script src="../assets/js/firebase-config.js"></script>
+    <script src="../assets/js/nav-auth.js"></script>
+    <script src="../assets/js/transition.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/booking.js"></script>
+    <script src="../assets/js/profile-doctor.js"></script>
+  </body>
+</html>

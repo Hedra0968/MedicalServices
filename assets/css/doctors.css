@@ -1,0 +1,860 @@
+/* Page Loader CSS */
+#pageLoader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition:
+    opacity 0.5s ease,
+    visibility 0.5s ease;
+}
+
+#pageLoader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader-spinner {
+  width: 34px;
+  height: 34px;
+  border: 3px solid #f3f3f3;
+  border-top-color: #1a7bd1;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.7s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero sec */
+.hero-txt {
+  width: 100%;
+  min-height: 10rem;
+  margin-top: 10rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-txt h2 {
+  margin: 15px 0;
+  max-width: 20em;
+}
+
+.hero-txt img {
+  display: block;
+  max-width: 55px;
+  height: 25px;
+  margin: 10px auto;
+}
+
+.hero-txt p {
+  color: #7682ab;
+  font-weight: 1em;
+  line-height: 1.3em;
+  max-width: 600px;
+  max-height: 50px;
+  margin: 0 auto;
+  font-size: 16px;
+}
+
+/* Section 1 */
+#sec1-container {
+  width: 100%;
+  min-height: 105rem;
+  display: flex;
+  align-items: flex-end;
+}
+
+.u-parent {
+  width: 100%;
+  min-height: calc(100rem - 95px);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  column-gap: 25px;
+  margin-bottom: 3rem;
+}
+
+@keyframes cardsAnimation {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.parent-card {
+  border-radius: 10px;
+  margin-top: 20px;
+  width: 300px;
+  height: 430px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease-in;
+}
+
+.cardfront {
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  flex-flow: column wrap;
+  overflow: hidden;
+  animation: cardsAnimation 3s linear forwards;
+  transform-origin: center top;
+  opacity: 0;
+}
+
+.cardfront .doc-img {
+  border-radius: 10px;
+  width: 100%;
+  height: 300px;
+}
+
+.cardfront:hover .doc-img {
+  transition: transform 0.8s ease-in;
+  transform: scale(1.08);
+}
+
+.cardfront .doc-name {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  align-self: center;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.cardfront:hover .doc-name {
+  transition: 0.8s;
+  margin-top: 20px;
+  color: #46b7de;
+}
+
+.cardfront .doc-job-title {
+  margin-bottom: 5px;
+  align-self: center;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.cardfront .c-btn {
+  min-width: 100px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid rgb(230, 217, 217);
+  text-transform: capitalize;
+  margin-bottom: 5px;
+  align-self: center;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.cardfront:hover .c-btn {
+  transition: transform 0.8s ease-in;
+  background-color: #135fa1;
+}
+
+.parent-card:has(.c-btn:focus) {
+  transform: rotateY(180deg);
+}
+
+.cardback {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  border-radius: 10px;
+  display: flex;
+  flex-flow: column nowrap;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.back-name {
+  font-size: 22px;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.back-specialty {
+  font-size: 16px;
+  color: #135fa1;
+  margin: 10px 0;
+  font-weight: 500;
+}
+
+.back-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 20px;
+  font-size: 14px;
+  color: #555555;
+}
+
+.back-details span {
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.back-bio {
+  margin: 0 15px !important;
+  font-size: 14px;
+  color: #444444;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.back-btn {
+  margin: 0 auto;
+  width: 75%;
+  margin-top: 20px;
+  margin-bottom: 3%;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #1a7bd1;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sec2-back-btn {
+  width: 15rem;
+  text-align: center;
+  height: 50px;
+  padding-top: 15px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.back-btn:hover {
+  background-color: #0e4680;
+  transform: scale(1.05);
+}
+
+.social-links {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 10px;
+}
+
+.social-links i {
+  font-size: 20px;
+  color: #135fa1;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.social-links i:hover {
+  color: #0e4680;
+  transform: translateY(-3px);
+}
+
+.back-btn1 {
+  margin-top: 70px;
+}
+
+.back-btn2 {
+  margin-top: 40px;
+}
+
+.back-btn3 {
+  margin-top: 60px;
+}
+
+.back-btn4 {
+  margin-top: 75px;
+}
+
+.back-btn5 {
+  margin-top: 20px;
+}
+
+.back-btn9 {
+  margin-top: 35px;
+}
+
+.card1-parent {
+  animation-delay: 0s;
+}
+
+.card2-parent {
+  animation-delay: 0.4s;
+}
+
+.card3-parent {
+  animation-delay: 0.8s;
+}
+
+.card4-parent {
+  animation-delay: 1.2s;
+}
+
+.card5-parent {
+  animation-delay: 1.6s;
+}
+
+.card6-parent {
+  animation-delay: 2s;
+}
+
+.card7-parent {
+  animation-delay: 2.4s;
+}
+
+.card8-parent {
+  animation-delay: 2.8s;
+}
+
+.card9-parent {
+  animation-delay: 3.2s;
+}
+
+.card10-parent {
+  animation-delay: 3.6s;
+}
+
+/* Sec 2 */
+#sec2-container {
+  width: 100%;
+  min-height: 85vh;
+  background-color: #46b7de;
+  background-image: url("../images/banner-img.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.booking-content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding-top: 8em;
+  margin-left: 5em;
+}
+
+.booking-subtitle {
+  font-size: 2.3em;
+  color: #135fa1;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.booking-title {
+  font-size: 2.5em;
+  color: #1a1a1a;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.booking-details {
+  margin-top: 1em;
+  font-size: 1em;
+  color: #555555;
+  max-width: 500px;
+  line-height: 1.2em;
+  text-align: center;
+}
+
+/* Laptop */
+@media (max-width: 1200px) {
+  .u-parent {
+    column-gap: 18px;
+    row-gap: 20px;
+    padding: 0 15px;
+  }
+
+  .parent-card {
+    width: 270px;
+    height: 410px;
+  }
+
+  .cardfront .doc-img {
+    height: 280px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1025px) {
+  .hero-txt {
+    margin-top: 7rem;
+    min-height: auto;
+    grid-template-rows: auto auto auto;
+    row-gap: 10px;
+    padding: 0 20px;
+  }
+
+  .hero-txt p {
+    max-height: none;
+  }
+
+  #sec1-container {
+    min-height: auto;
+    align-items: center;
+    padding-bottom: 2rem;
+  }
+
+  .u-parent {
+    min-height: auto;
+    column-gap: 20px;
+    row-gap: 25px;
+  }
+
+  .parent-card {
+    width: 260px;
+    height: 400px;
+  }
+
+  .cardfront .doc-img {
+    height: 260px;
+  }
+
+  #sec2-container {
+    background-position: center;
+    background-size: cover;
+    padding: 55px 20px;
+  }
+
+  .doc-name {
+    font-size: 21px !important;
+  }
+
+  .booking-content {
+    width: 50%;
+    margin-left: 0;
+    padding-top: 0;
+    align-items: flex-start;
+    text-align: center;
+  }
+
+  .booking-title {
+    font-size: 2.2rem;
+    margin-right: 0.5em;
+  }
+
+  .booking-subtitle {
+    font-size: 2.2rem;
+    margin-left: 2em;
+  }
+
+  .booking-details {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .back-btn-customize {
+    margin-left: 2em;
+  }
+
+  .back-bio {
+    font-size: 10px;
+  }
+
+  .back-name {
+    font-size: 16px;
+    color: #1a1a1a;
+    font-weight: 600;
+  }
+
+  .back-specialty {
+    font-size: 14px;
+    color: #135fa1;
+    margin: 10px 0;
+    font-weight: 500;
+  }
+
+  .back-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0 4px !important;
+    font-size: 12px;
+    color: #555555;
+  }
+
+  .back-details span {
+    color: #1a1a1a;
+    font-weight: 600;
+  }
+
+  .back-bio {
+    font-size: 13px;
+    color: #444444;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  .back-btn1 {
+    margin-top: 70px;
+  }
+
+  .back-btn2 {
+    margin-top: 80px;
+  }
+
+  .back-btn3 {
+    margin-top: 60px;
+  }
+
+  .back-btn4 {
+    margin-top: 60px;
+  }
+
+  .back-btn5 {
+    margin-top: px;
+  }
+
+  .back-btn8 {
+    margin-top: 70px;
+  }
+
+  .back-btn9 {
+    margin-top: 30px;
+  }
+}
+
+/* Tablet - small / large phones */
+@media (max-width: 768px) {
+  .hero-txt {
+    margin-top: 6rem;
+  }
+
+  .hero-txt h2 {
+    font-size: 1.6rem;
+    max-width: 90%;
+    margin: 10px auto;
+  }
+
+  .hero-txt p {
+    font-size: 15px;
+    max-width: 90%;
+  }
+
+  .u-parent {
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+
+  .parent-card {
+    width: 100%;
+    max-width: 320px;
+    height: 420px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cardfront .doc-img {
+    height: 280px;
+  }
+
+  .back-name {
+    font-size: 20px;
+    color: #1a1a1a;
+    font-weight: 600;
+  }
+
+  .sec2-back-btn {
+    width: 14rem;
+    margin-left: 4em !important;
+  }
+
+  .back-specialty {
+    font-size: 16px;
+    color: #135fa1;
+    margin: 10px 0;
+    font-weight: 500;
+  }
+
+  .back-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0 4px !important;
+    font-size: 12px;
+    color: #555555;
+  }
+
+  .back-details span {
+    color: #1a1a1a;
+    font-weight: 600;
+  }
+
+  .back-bio {
+    font-size: 15px;
+    color: #444444;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  .back-btn1 {
+    margin-top: 70px;
+  }
+
+  .back-btn2 {
+    margin-top: 90px;
+  }
+
+  .back-btn3 {
+    margin-top: 60px;
+  }
+
+  .back-btn4 {
+    margin-top: 80px;
+  }
+
+  .back-btn5 {
+    margin-top: px;
+  }
+
+  .back-btn8 {
+    margin-top: 70px;
+  }
+
+  .back-btn9 {
+    margin-top: 35px;
+  }
+
+  .booking-subtitle {
+    max-width: 300px !important;
+    font-size: 1.6em;
+    margin-left: 2.2em !important;
+  }
+
+  .booking-title {
+    text-align: center;
+    font-size: 1.8em;
+  }
+
+  .back-btn {
+    text-align: center;
+    margin-left: 3em;
+  }
+}
+
+/* Mobile Phone (Small screens) */
+@media (max-width: 576px) {
+  .hero-txt {
+    margin-top: 5.5rem;
+    padding: 0 15px;
+  }
+
+  .hero-txt h2 {
+    font-size: 1.4rem;
+  }
+
+  .hero-txt img {
+    max-width: 45px;
+    height: 20px;
+  }
+
+  .hero-txt p {
+    font-size: 14px;
+    line-height: 1.4em;
+  }
+
+  #sec1-container {
+    padding: 0 10px 1.5rem;
+  }
+
+  .u-parent {
+    column-gap: 0;
+    row-gap: 20px;
+  }
+
+  .parent-card {
+    width: 100%;
+    max-width: 300px;
+    height: 400px;
+  }
+
+  .cardfront .doc-img {
+    height: 260px;
+  }
+
+  .cardfront .doc-name {
+    font-size: 20px;
+  }
+
+  .back-details {
+    font-size: 13px;
+    gap: 8px 14px;
+  }
+
+  .back-bio {
+    font-size: 13px;
+    padding: 0 10px;
+  }
+
+  #sec2-container {
+    background-position: -50px center;
+    background-size: cover;
+    padding: 100px 15px;
+    min-height: 500px;
+  }
+
+  .booking-content {
+    width: 100%;
+    margin-left: 0;
+    padding-top: 0;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .booking-subtitle {
+    width: 20em !important;
+    margin-right: 2em;
+    font-size: 1.6rem;
+    line-height: 1.1;
+  }
+
+  .booking-title {
+    margin-left: 0.8em;
+    font-size: 1.6rem;
+    line-height: 1.1;
+  }
+
+  .booking-details {
+    margin-left: 0;
+    max-width: 100%;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    padding: 0 5px;
+  }
+
+  .sec2-back-btn {
+    margin-left: 6em !important;
+    font-size: 14px;
+  }
+
+  .back-btn-customize {
+    margin-left: 4em;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 400px) {
+  .hero-txt {
+    margin-top: 5rem;
+  }
+
+  .hero-txt h2 {
+    font-size: 1.2rem;
+  }
+
+  .parent-card {
+    max-width: 100%;
+    height: 380px;
+  }
+
+  .cardfront .doc-img {
+    height: 230px;
+  }
+
+  .cardfront .doc-name {
+    font-size: 18px;
+  }
+
+  .cardfront .doc-job-title {
+    font-size: 15px;
+  }
+
+  .back-name {
+    font-size: 18px;
+  }
+
+  .back-specialty {
+    font-size: 14px;
+    margin: 8px 0;
+  }
+
+  .social-links i {
+    font-size: 17px;
+  }
+
+  .booking-subtitle {
+    width: 100%;
+    text-align: center;
+    margin-right: 1.8em;
+    font-size: 1.6rem;
+    line-height: 1.1;
+  }
+
+  .booking-title {
+    font-size: 1.6rem;
+    line-height: 1.1;
+  }
+
+  .booking-details {
+    margin-left: 0;
+    max-width: 100%;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    padding: 0 5px;
+  }
+
+  .sec2-back-btn {
+    margin: 0 auto !important;
+  }
+
+  .back-btn2 {
+    margin-top: 80px;
+  }
+
+  .back-btn3 {
+    margin-top: 50px;
+  }
+
+  .back-btn4 {
+    margin-top: 70px;
+  }
+
+  .back-btn5 {
+    margin-top: 40px;
+  }
+}

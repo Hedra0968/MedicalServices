@@ -1,0 +1,244 @@
+/* Start Auth Section */
+#auth {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 130px 0 60px;
+    background-color: var(--bg-white);
+}
+
+.auth-card {
+    max-width: 440px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    padding: 2.5rem 2rem;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: authCardIn 0.7s ease forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes authCardIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.auth-tabs {
+    position: relative;
+    display: flex;
+    background-color: var(--bg-white);
+    border-radius: 30px;
+    padding: 5px;
+    margin-bottom: 1.75rem;
+}
+
+.auth-tab {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 10px 0;
+    font-weight: 500;
+    color: var(--light-gray);
+    border-radius: 30px;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.auth-tab.active {
+    color: #fff;
+}
+
+.auth-tab-indicator {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: calc(50% - 5px);
+    height: calc(100% - 10px);
+    background-color: var(--light-blue);
+    border-radius: 30px;
+    transition: transform 0.35s ease;
+    z-index: 1;
+}
+
+.auth-tab-indicator.move-right {
+    transform: translateX(100%);
+}
+
+.auth-form h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.auth-sub {
+    font-size: 14px;
+    margin-bottom: 1.5rem;
+}
+
+.auth-form .form-control {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+.auth-form .form-control:focus {
+    border-color: var(--light-blue);
+    box-shadow: none;
+}
+
+.field-error {
+    font-size: 12px;
+    color: #d9534f;
+    margin-top: 4px;
+    min-height: 14px;
+}
+
+.form-control.is-invalid {
+    border-color: #d9534f;
+}
+
+.form-control.is-valid {
+    border-color: #28a745;
+}
+
+/* Role Select */
+.role-select {
+    display: flex;
+    gap: 10px;
+}
+
+.role-option {
+    flex: 1;
+    display: block;
+    cursor: pointer;
+    margin: 0;
+}
+
+.role-option input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.role-option span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--light-gray);
+    transition: all 0.2s ease;
+}
+
+.role-option input:checked + span {
+    border-color: var(--light-blue);
+    color: var(--light-blue);
+    background-color: #e3f1fc;
+}
+
+/* Password Strength */
+.pw-strength {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 6px;
+}
+
+.pw-strength-bar {
+    flex: 1;
+    height: 5px;
+    background-color: #eee;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.pw-strength-bar i {
+    display: block;
+    height: 100%;
+    width: 0%;
+    background-color: #d9534f;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.pw-strength-label {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--light-gray);
+    min-width: 55px;
+}
+
+.auth-btn {
+    width: auto;
+    min-width: 160px;
+    display: block;
+    margin: 0.5rem auto 0;
+    padding: 12px 30px;
+}
+
+.auth-switch {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 1.25rem;
+}
+
+.auth-switch a {
+    color: var(--light-blue);
+    font-weight: 500;
+}
+
+.auth-switch a:hover {
+    text-decoration: underline;
+}
+
+.auth-msg {
+    text-align: center;
+    font-size: 14px;
+    min-height: 20px;
+    margin-bottom: 10px;
+}
+
+.auth-msg.success {
+    color: #28a745;
+}
+
+.auth-msg.error {
+    color: #d9534f;
+}
+
+/* Animation Sign In / Sign Up forms */
+.auth-form {
+    animation: authFormFade 0.4s ease;
+}
+
+@keyframes authFormFade {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* End Auth Section */
+/* Start Responsive */
+@media (max-width: 480px) {
+    .auth-card {
+        padding: 2rem 1.25rem;
+        margin: 0 15px;
+    }
+
+    .auth-btn {
+        min-width: 130px;
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .auth-tab {
+        font-size: 14px;
+        padding: 8px 0;
+    }
+}
+/* End Responsive */

@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services - Medical Srvices</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon"/>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css" />
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="../assets/icons/fontawesome/css/all.min.css" />
+    <!-- Main Style -->
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <!-- Services Style -->
+    <link rel="stylesheet" href="../assets/css/services.css" />
+  </head>
+  <body>
+    <div id="pageLoader"><div class="loader-spinner"></div></div>
+    <!-- Start Navbar -->
+    <nav class="navbar navbar-expand-lg" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">
+          <img
+            src="../assets/images/logo.png"
+            alt="MedStar Hospital"
+            class="logo"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+          aria-controls="navMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="../html/services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/doctors.html">Doctors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/blogs.html">Blogs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/contact.html">Contact</a>
+            </li>
+            <li class="nav-item search-item-mobile d-lg-none">
+              <form class="mobile-search-form" id="mobileSearchForm">
+                <input
+                  type="search"
+                  id="mobileSiteSearch"
+                  placeholder="Search..."
+                  autocomplete="off"
+                />
+                <button type="submit" aria-label="Search">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </form>
+            </li>
+            <li class="nav-item d-lg-none">
+              <a
+                href="../html/login.html"
+                class="btn btn-primary login-btn-mobile active"
+                >Login</a
+              >
+            </li>
+          </ul>
+          <div class="nav-extra d-none d-lg-flex align-items-center">
+            <button
+              type="button"
+              class="search-btn"
+              id="searchButton"
+              aria-label="Open search"
+            >
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <a href="../html/login.html" class="btn btn-primary login-btn"
+              >Login</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+    <!-- Start Search Box -->
+    <div class="search-box" id="searchBox">
+      <form id="searchForm">
+        <input
+          type="search"
+          id="siteSearch"
+          placeholder="Search..."
+          autocomplete="off"
+        />
+        <button type="submit" aria-label="Search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+    </div>
+    <!-- End Search Box -->
+    <!-- sec1 -->
+    <section id="sec1-hero">
+      <div class="hero-main">
+        <h2 class="hero-title reveal">
+          Your Health, Our Priority – Expert Medical Care at Your Doorstep
+        </h2>
+        <p class="hero-sub reveal">
+          We provide trusted, compassionate healthcare services with a team of
+          top specialists dedicated to your well-being.
+        </p>
+      </div>
+    </section>
+    <!-- sec2 -->
+    <section id="sec2-main">
+      <div class="u-wrapper reveal">
+        <img
+          class="reveal img-customize"
+          src="../assets/images/doc3.png"
+          alt=""
+        />
+        <div class="right-side reveal">
+          <h1 class="reveal">About us</h1>
+          <p class="reveal">
+            We are a dedicated team of medical professionals committed to
+            providing exceptional, patient-centered healthcare. With a focus on
+            trust, innovation, and compassion, we strive to make every visit a
+            comfortable and reassuring experience for you and your family.
+          </p>
+          <div id="faq-group-close" class="faq-accordion">
+            <div class="faq-item">
+              <div class="faq-header">
+                <button
+                  class="faq-btn"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq1"
+                >
+                  WHY CHOOSE US?
+                  <span class="arrow">↓</span>
+                </button>
+              </div>
+              <div id="faq1" class="collapse" data-bs-parent="#faq-group-close">
+                <div class="faq-body">
+                  We provide top-quality medical care with experienced
+                  specialists and state-of-the-art equipment. Your health is our
+                  priority.
+                  <br />
+                  From the moment you walk in, you will be treated with the
+                  respect and personalized attention you deserve, ensuring a
+                  seamless journey toward better health.
+                </div>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-header">
+                <button
+                  class="faq-btn"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq2"
+                >
+                  WHAT WE DO?
+                  <span class="arrow">↓</span>
+                </button>
+              </div>
+              <div id="faq2" class="collapse" data-bs-parent="#faq-group-close">
+                <div class="faq-body">
+                  We offer comprehensive healthcare services ranging from
+                  routine checkups to advanced surgical procedures. We cover all
+                  your medical needs.
+                  <br />
+                  Our multi-disciplinary approach allows us to treat the whole
+                  person, not just the symptoms, coordinating care across our
+                  network of leading specialists.
+                </div>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-header">
+                <button
+                  class="faq-btn"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq3"
+                >
+                  OFFER SERVICES
+                  <span class="arrow">↓</span>
+                </button>
+              </div>
+              <div id="faq3" class="collapse" data-bs-parent="#faq-group-close">
+                <div class="faq-body">
+                  Our services include general medicine, pediatrics, cardiology,
+                  dermatology, and emergency care. We also offer home visit
+                  services.
+                  <br />
+                  Whether you need a quick consultation or a complex surgical
+                  intervention, our state-of-the-art facilities and experienced
+                  staff are ready to serve you 24/7.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- sec3 -->
+    <section id="sec3-main">
+      <div class="sec3-wrapper">
+        <div class="u-card card1 reveal">
+          <div class="upper-part">
+            <img src="../assets/images/1S-2.webp" alt="Doctor Treatment" />
+            <i class="fa-solid fa-rectangle-list"></i>
+          </div>
+          <div class="lower-part">
+          <h3>General Treatment</h3>
+          <p>
+            Checkups, diagnosis and follow-up care for everyday health concerns,
+            handled by our general practitioners.
+          </p>
+          <div class="services-list">
+            <span>Routine Checkups</span>
+            <span class="m-bottom">Diagnosis & Treatment</span>
+          </div>
+          <a href="../html/services-details/services-details-1.html" class="btn-learn-more">Learn More →</a>
+        </div>
+      </div>
+      <div class="u-card card2 reveal">
+          <div class="upper-part">
+            <img src="../assets/images/2S.jpeg" alt="Doctor Treatment" />
+            <i class="fa-solid fa-tooth"></i>
+          </div>
+            <div class="lower-part">
+          <h3>Dental Care</h3>
+          <p>
+              Teeth cleaning, whitening and restorative dentistry 
+              performed with modern, pain-free techniques.
+          </p>
+          <div class="services-list">
+            <span>Routine Checkups</span>
+            <span class="m-bottom">Diagnosis & Treatment</span>
+          </div>
+          <a href="../html/services-details/services-details-2.html" class="btn-learn-more">Learn More →</a>
+        </div>
+      </div>
+      <div class="u-card card3 reveal">
+          <div class="upper-part">
+            <img src="../assets/images/S3.jpg" alt="Doctor Treatment" />
+            <i class="fa-solid fa-heart-pulse"></i>
+          </div>
+          <div class="lower-part">
+            <h3>Cardiac Care</h3>
+            <p>
+              Heart screening, catheterization and surgery led by our 
+              cardiology team using advanced monitoring tools.
+            </p>
+            <div class="services-list">
+              <span>Routine Checkups</span>
+              <span class="m-bottom">Diagnosis & Treatment</span>
+            </div>
+            <a href="../html/services-details/services-details-3.html" class="btn-learn-more">Learn More →</a>
+          </div>
+        </div>
+        <div class="u-card card4 reveal">
+          <div class="upper-part">
+            
+            <img src="../assets/images/S4.webp" alt="Doctor Treatment" />
+            <i class="fa-solid fa-ear-listen"></i>
+          </div>
+          <div class="lower-part">
+            <h3>ENT Treatment</h3>
+            <p>
+              Diagnosis and treatment for ear, nose and throat 
+              conditions for both children and adults.
+            </p>
+            <div class="services-list">
+              <span>Routine Checkups</span>
+              <span class="m-bottom">Diagnosis & Treatment</span>
+            </div>
+            <a href="../html/services-details/services-details-4.html" class="btn-learn-more">Learn More →</a>
+          </div>
+        </div>
+        <div class="u-card card5 reveal">
+          <div class="upper-part">
+            <img src="../assets/images/S5.jpeg" alt="Doctor Treatment" />
+            <i class="fa-solid fa-eye"></i>
+          </div>
+          <div class="lower-part">
+            <h3>Eye Care</h3>
+            <p>
+              Complete vision testing, treatment of eye conditions 
+              and surgical procedures by our ophthalmologists.
+            </p>
+            <div class="services-list">
+              <span>Routine Checkups</span>
+              <span class="m-bottom">Diagnosis & Treatment</span>
+            </div>
+            <a href="../html/services-details/services-details-5.html" class="btn-learn-more">Learn More →</a>
+          </div>
+        </div>
+        <div class="u-card card6 reveal">
+          <div class="upper-part">
+            <img src="../assets/images/S6.jpg" alt="Doctor Treatment" />
+            <i class="fa-solid fa-droplet"></i>
+          </div>
+          <div class="lower-part">
+            <h3>Blood Transfusion</h3>
+            <p>
+              A fully stocked blood bank with rigorous safety 
+              screening, available around the clock for 
+              patients in need.
+            </p>
+          <div class="services-list">
+            <span>Routine Checkups</span>
+            <span class="m-bottom">Diagnosis & Treatment</span>
+          </div>
+          <a href="../html/services-details/services-details-6.html" class="btn-learn-more">Learn More →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- sec4 -->
+<section id="sec4-main" class="">
+  <div class="sec4-upper-parent">
+    <div class="sec4-content">
+        <h3 class="sec4-subtitle reveal">Your Health Matters To Us</h3>
+        <h1 class="sec4-title reveal">Ready To Start Your Journey?</h1>
+        <p class="sec4-details reveal">
+            We have walked you through our services, our doctors, and our values. 
+            Now, take the final step. Schedule your consultation today and let our 
+            expert team guide you toward a healthier, happier life.
+        </p>
+    </div>
+  </div>
+      <div class="sec4-lower-parent">
+        <div class="lower-parent">
+          
+          <div class="sec4-card1">
+            <div class="icon-wrapper">📅</div>
+            <h3 class="card-title">Schedule Consultation</h3>
+            <p class="card-details">Book your neurological evaluation with our expert team</p>
+            <a href="./contact.html" class="back-btn back-btn-customize reveal">Get Started Now</a>
+            <p class="card-footer">Next available: Tomorrow</p>
+        </div>
+        <div class="sec4-card3">
+            <div class="icon-wrapper">📄</div>
+            <h3 class="card-title">Get Second Opinion</h3>
+            <p class="card-details">Expert review of existing diagnoses and treatment plans</p>
+            <button class="back-btn back-btn-customize reveal">Request Review</button>
+            <p class="card-footer">Response within 24h</p>
+        </div>
+    </div>
+      </div>
+</section>
+    <!-- Start Footer -->
+    <footer id="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row gy-5">
+            <div class="col-md-6 col-lg-3">
+              <h2>About Us</h2>
+              <hr />
+              <p>
+                Medical Services has been serving our community with
+                trusted, patient-first medical care across every major
+                specialty.
+              </p>
+              <div class="social">
+                <a href="https://www.facebook.com/" target="_blank" aria-label="visit facebook"
+                  ><i class="fa-brands fa-facebook-f"></i
+                ></a>
+                <a href="https://www.google.com/" target="_blank" aria-label="visit google"
+                  ><i class="fa-brands fa-google-plus-g"></i
+                ></a>
+                <a href="https://x.com/" target="_blank" aria-label="visit twitter"
+                  ><i class="fa-brands fa-twitter"></i
+                ></a>
+                <a href="https://vimeo.com/" target="_blank" aria-label="visit vimeo"
+                  ><i class="fa-brands fa-vimeo-v"></i
+                ></a>
+                <a href="https://www.pinterest.com/" target="_blank" aria-label="visit pinterest"
+                  ><i class="fa-brands fa-pinterest-p"></i
+                ></a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <h2>Quick Links</h2>
+              <hr />
+              <ul class="footer-links">
+                <li>
+                  <a href="../index.html"
+                    ><i class="fa-solid fa-caret-right"></i> Home</a
+                  >
+                </li>
+                <li>
+                  <a href="../html/about.html"
+                    ><i class="fa-solid fa-caret-right"></i> About</a
+                  >
+                </li>
+                <li>
+                  <a href="../html/services.html"
+                    ><i class="fa-solid fa-caret-right"></i> Services</a
+                  >
+                </li>
+                <li>
+                  <a href="../html/doctors.html"
+                    ><i class="fa-solid fa-caret-right"></i> Doctors</a
+                  >
+                </li>
+                <li>
+                  <a href="../html/blogs.html"
+                    ><i class="fa-solid fa-caret-right"></i> Blogs</a
+                  >
+                </li>
+                <li>
+                  <a href="../html/contact.html"
+                    ><i class="fa-solid fa-caret-right"></i> Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <h2>Open Hours</h2>
+              <hr />
+              <p>
+                We're here when you need us. Emergency services remain open
+                24 hours a day, every day of the week.
+              </p>
+              <ul class="footer-links no-icon">
+                <li>Monday - Thursday 8:00 - 20:00</li>
+                <li>Saturday 9:00 - 18:00</li>
+                <li>Friday 9:00 - 15:00</li>
+              </ul>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <h2>Newsletter</h2>
+              <hr />
+              <p>
+                Subscribe for the latest hospital news and health advice,
+                straight to your inbox.
+              </p>
+              <form class="footer-newsletter-form" id="footerNewsletterForm" novalidate>
+                <input
+                  type="email"
+                  name="Email"
+                  id="footerNewsletterEmail"
+                  placeholder="Email Address"
+                  required
+                />
+                <button type="submit" aria-label="send mail">
+                  <i class="fa-solid fa-paper-plane"></i>
+                </button>
+              </form>
+              <p class="form-msg" id="footerNewsletterMsg"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>
+          &copy; All Rights Reserved 2026 | Made By<br />
+          <a
+            href="https://www.linkedin.com/in/hedra-victor-4b333033a"
+            target="_blank"
+            >Eng.Hedra Victor</a
+          >
+          & <a href="https://www.linkedin.com/in/arsany-amir-0132173a7" target="_blank">Eng.Arsany Amir</a> &
+          <a
+            href="https://www.linkedin.com/in/persis-magdy-54658740b"
+            target="_blank"
+            >Eng.Persis Magdy</a
+          >
+          & <a href="https://www.linkedin.com/in/marwan-mokhtar-037301229/" target="_blank">Eng.Marwan Mokhtar</a> &
+          <a href="https://eg.linkedin.com/in/ashraf-elhamady-b03962341" target="_blank">Eng.Ashraf Elhamady</a>
+        </p>
+      </div>
+    </footer>
+    <!-- End Footer -->
+    <!-- Back To Top -->
+    <button type="button" id="backToTop" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <script src="../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+    <script src="../assets/js/firebase-config.js"></script>
+    <script src="../assets/js/nav-auth.js"></script>
+    <script src="../assets/js/transition.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/booking.js"></script>
+    <!-- Login JS -->
+    <script src="../assets/js/services.js"></script>
+  </body>
+</html>

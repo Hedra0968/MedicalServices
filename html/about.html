@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - Medical Services</title>
+    <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/icons/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/about.css" />
+  </head>
+  <body>
+    <div id="pageLoader"><div class="loader-spinner"></div></div>
+    <nav class="navbar navbar-expand-lg" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">
+          <img
+            src="../assets/images/logo.png"
+            alt="Medical Services"
+            class="logo"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+          aria-controls="navMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="../html/about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/doctors.html">Doctors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/blogs.html">Blogs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/contact.html">Contact</a>
+            </li>
+            <li class="nav-item search-item-mobile d-lg-none">
+              <form class="mobile-search-form" id="mobileSearchForm">
+                <input
+                  type="search"
+                  id="mobileSiteSearch"
+                  placeholder="Search..."
+                  autocomplete="off"
+                />
+                <button type="submit" aria-label="Search">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </form>
+            </li>
+            <li class="nav-item d-lg-none">
+              <a
+                href="../html/login.html"
+                class="btn btn-primary login-btn-mobile"
+                >Login</a
+              >
+            </li>
+          </ul>
+          <div class="nav-extra d-none d-lg-flex align-items-center">
+            <button
+              type="button"
+              class="search-btn"
+              id="searchButton"
+              aria-label="Open search"
+            >
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <a href="../html/login.html" class="btn btn-primary login-btn"
+              >Login</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="search-box" id="searchBox">
+      <form id="searchForm">
+        <input
+          type="search"
+          id="siteSearch"
+          placeholder="Search..."
+          autocomplete="off"
+        />
+        <button type="submit" aria-label="Search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+    </div>
+    <main>
+      <section id="about-intro" class="section-padding">
+        <div class="container">
+          <div class="title reveal">
+            <h2>Get To Know MedStar Hospital</h2>
+            <img src="../assets/images/section-img.png" alt="section-img" />
+            <p>
+              A short look at who we are, the story behind our hospital, and
+              what keeps us going every single day.
+            </p>
+          </div>
+          <div class="row align-items-center gy-4 mt-3">
+            <div class="col-lg-6 reveal">
+              <img
+                src="../assets/images/about-img.png"
+                alt="about-img"
+                class="img-fluid rounded"
+              />
+            </div>
+            <div class="col-lg-6 reveal">
+              <h3>Our Story</h3>
+              <hr class="short-hr" />
+              <p>
+                Medstar Hospital Started With One Simple Goal -- To Take Health
+                Care Personally. Because Excellence In Health Care Is About More
+                Than Medicine, Technology, Tests And Treatments.
+              </p>
+              <p>
+                It Is About Really Caring For People With Dignity And Respect.
+                That's What We Do. We Are Dedicated To Providing The Best Care
+                To Meet The Need Of People For Our Community, For Our Patients
+                -- For You.
+              </p>
+              <div class="row check-list">
+                <div class="col-6">
+                  <ul>
+                    <li>
+                      <a
+                        data-bs-toggle="collapse"
+                        href="#extraDesc1"
+                        role="button"
+                        aria-expanded="false"
+                        aria-controls="extraDesc1"
+                        class="text-decoration-none text-dark"
+                        ><i class="fa-solid fa-circle-play"></i> Certified
+                        Specialist Doctors</a
+                      >
+                      <div
+                        class="collapse mt-2 text-muted small"
+                        id="extraDesc1"
+                      >
+                        Our doctors hold international boards and extensive
+                        clinical experience to ensure top-tier medical guidance.
+                      </div>
+                    </li>
+                    <li>
+                      <a
+                        data-bs-toggle="collapse"
+                        href="#extraDesc2"
+                        role="button"
+                        aria-expanded="false"
+                        aria-controls="extraDesc2"
+                        class="text-decoration-none text-dark"
+                        ><i class="fa-solid fa-circle-play"></i> 24/7 Emergency
+                        Care</a
+                      >
+                      <div
+                        class="collapse mt-2 text-muted small"
+                        id="extraDesc2"
+                      >
+                        Always prepared for critical situations with fully
+                        equipped response units and specialized trauma staff.
+                      </div>
+                    </li>
+                    <li>
+                      <a
+                        data-bs-toggle="collapse"
+                        href="#extraDesc3"
+                        role="button"
+                        aria-expanded="false"
+                        aria-controls="extraDesc3"
+                        class="text-decoration-none text-dark"
+                        ><i class="fa-solid fa-circle-play"></i> Modern Medical
+                        Equipment</a
+                      >
+                      <div
+                        class="collapse mt-2 text-muted small"
+                        id="extraDesc3"
+                      >
+                        Utilizing advanced diagnostic imaging tools and
+                        cutting-edge surgical technology for accurate
+                        treatments.
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-6">
+                  <ul>
+                    <li>
+                      <a
+                        data-bs-toggle="collapse"
+                        href="#extraDesc4"
+                        role="button"
+                        aria-expanded="false"
+                        aria-controls="extraDesc4"
+                        class="text-decoration-none text-dark"
+                        ><i class="fa-solid fa-circle-play"></i> Affordable
+                        Treatment Plans</a
+                      >
+                      <div
+                        class="collapse mt-2 text-muted small"
+                        id="extraDesc4"
+                      >
+                        Flexible pricing and health coverage options designed to
+                        make quality healthcare accessible to everyone.
+                      </div>
+                    </li>
+                    <li>
+                      <a
+                        data-bs-toggle="collapse"
+                        href="#extraDesc5"
+                        role="button"
+                        aria-expanded="false"
+                        aria-controls="extraDesc5"
+                        class="text-decoration-none text-dark"
+                        ><i class="fa-solid fa-circle-play"></i> Fully Equipped
+                        Pharmacy</a
+                      >
+                      <div
+                        class="collapse mt-2 text-muted small"
+                        id="extraDesc5"
+                      >
+                        Stocked with a comprehensive inventory of local and
+                        imported medications available around the clock.
+                      </div>
+                    </li>
+                    <li>
+                      <a
+                        data-bs-toggle="collapse"
+                        href="#extraDesc6"
+                        role="button"
+                        aria-expanded="false"
+                        aria-controls="extraDesc6"
+                        class="text-decoration-none text-dark"
+                        ><i class="fa-solid fa-circle-play"></i> Friendly
+                        Support Staff</a
+                      >
+                      <div
+                        class="collapse mt-2 text-muted small"
+                        id="extraDesc6"
+                      >
+                        A compassionate customer service and nursing team
+                        dedicated to providing a comfortable and welcoming
+                        environment.
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="info" class="section-padding">
+        <div class="container">
+          <div class="row text-center gy-4">
+            <div class="col-6 col-lg-3 reveal">
+              <div class="info-box">
+                <i class="fa-solid fa-house-chimney"></i>
+                <div>
+                  <span class="counter-plus">+</span
+                  ><span class="counter" data-target="3468">0</span>
+                  <p>Hospital Rooms</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3 reveal">
+              <div class="info-box">
+                <i class="fa-solid fa-user"></i>
+                <div>
+                  <span class="counter-plus">+</span
+                  ><span class="counter" data-target="557">0</span>
+                  <p>Specialist Doctors</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3 reveal">
+              <div class="info-box">
+                <i class="fa-solid fa-face-smile-beam"></i>
+                <div>
+                  <span class="counter-plus">+</span
+                  ><span class="counter" data-target="4379">0</span>
+                  <p>Happy Patients</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3 reveal">
+              <div class="info-box">
+                <i class="fa-solid fa-table-list"></i>
+                <div>
+                  <span class="counter-plus">+</span
+                  ><span class="counter" data-target="32">0</span>
+                  <p>Years Of Experience</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="help" class="section-padding">
+        <div class="container">
+          <div class="title reveal">
+            <h2>We Are Always Ready To Help You &amp; Your Family</h2>
+            <img src="../assets/images/section-img.png" alt="section-img" />
+            <p>
+              Whatever the situation, our team is one call away, day and night,
+              to give you the care you need.
+            </p>
+          </div>
+          <div class="row text-center gy-5 mt-3 help-row">
+            <div class="col-md-4 reveal help-box">
+              <i class="fa-solid fa-truck-medical"></i>
+              <h3>Emergency Help</h3>
+              <p class="help-desc">
+                Our emergency unit operates 24/7 with a fully equipped ambulance
+                fleet and a rapid-response medical team.
+              </p>
+            </div>
+            <div class="col-md-4 reveal help-box">
+              <i class="fa-solid fa-heart-pulse"></i>
+              <h3>Enriched Pharmacy</h3>
+              <p class="help-desc">
+                An in-house pharmacy stocked with a wide range of medicines,
+                staffed by licensed pharmacists to guide every prescription.
+              </p>
+            </div>
+            <div class="col-md-4 reveal help-box">
+              <i class="fa-solid fa-stethoscope"></i>
+              <h3>Medical Treatment</h3>
+              <p class="help-desc">
+                Accurate diagnosis and personalized treatment plans led by
+                specialist doctors across all major departments.
+              </p>
+            </div>
+            <div class="col-md-4 reveal help-box">
+              <i class="fa-solid fa-user-doctor"></i>
+              <h3>Expert Consultation</h3>
+              <p class="help-desc">
+                Book one-on-one appointments with leading consultants and
+                specialists for tailored health advice.
+              </p>
+            </div>
+            <div class="col-md-4 reveal help-box">
+              <i class="fa-solid fa-flask-vial"></i>
+              <h3>Advanced Laboratory</h3>
+              <p class="help-desc">
+                State-of-the-art diagnostic testing and pathology labs
+                delivering fast, accurate results.
+              </p>
+            </div>
+            <div class="col-md-4 reveal help-box">
+              <i class="fa-solid fa-bed-pulse"></i>
+              <h3>Intensive Care Unit</h3>
+              <p class="help-desc">
+                Fully monitored ICU wards equipped with life-support technology
+                and specialized critical care nurses.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="journey" class="section-padding">
+        <div class="container">
+          <div class="title reveal">
+            <h2>Our Journey So Far</h2>
+            <img src="../assets/images/section-img.png" alt="section-img" />
+            <p>
+              From one small clinic to a full hospital family — here's the short
+              version of how we got here.
+            </p>
+          </div>
+          <div class="journey-line mt-3">
+            <div class="journey-item reveal">
+              <div class="journey-dot">
+                <i class="fa-solid fa-seedling"></i>
+              </div>
+              <div class="journey-content">
+                <span class="journey-year">1994</span>
+                <h3>A Tiny Clinic, A Big Idea</h3>
+                <p>
+                  We started with two rooms, one stethoscope, and a lot of
+                  coffee.
+                </p>
+              </div>
+            </div>
+            <div class="journey-item reveal">
+              <div class="journey-dot">
+                <i class="fa-solid fa-truck-medical"></i>
+              </div>
+              <div class="journey-content">
+                <span class="journey-year">2003</span>
+                <h3>Hello, Emergency Wing</h3>
+                <p>Our first ambulance joined the team.</p>
+              </div>
+            </div>
+            <div class="journey-item reveal">
+              <div class="journey-dot">
+                <i class="fa-solid fa-user-doctor"></i>
+              </div>
+              <div class="journey-content">
+                <span class="journey-year">2014</span>
+                <h3>500+ Doctors Strong</h3>
+                <p>Our specialist team crossed the 500 mark.</p>
+              </div>
+            </div>
+            <div class="journey-item reveal">
+              <div class="journey-dot">
+                <i class="fa-solid fa-hospital"></i>
+              </div>
+              <div class="journey-content">
+                <span class="journey-year">Today</span>
+                <h3>Still Growing, Still Caring</h3>
+                <p>Thousands of patients later, the goal hasn't changed.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="fun-facts" class="section-padding-sm">
+        <div class="container">
+          <div class="title reveal">
+            <h2>A Few Fun Facts</h2>
+            <p>The lighter side of what happens around here.</p>
+          </div>
+          <div class="row gy-4 mt-3 text-center fun-facts-row">
+            <div class="col-6 col-lg-3 reveal">
+              <div class="fun-fact-badge">
+                <i class="fa-solid fa-mug-hot"></i>
+                <p><strong>10,000+</strong> cups of coffee brewed</p>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3 reveal">
+              <div class="fun-fact-badge">
+                <i class="fa-solid fa-shoe-prints"></i>
+                <p><strong>7 km</strong> is roughly how far nurses walk</p>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3 reveal">
+              <div class="fun-fact-badge">
+                <i class="fa-solid fa-baby"></i>
+                <p><strong>3</strong> babies born here share our birthday</p>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3 reveal">
+              <div class="fun-fact-badge">
+                <i class="fa-solid fa-face-laugh-beam"></i>
+                <p><strong>Countless</strong> jokes told</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="good-vibes" class="section-padding">
+        <div class="container">
+          <div class="title reveal">
+            <h2>Good Vibes Only</h2>
+            <img src="../assets/images/section-img.png" alt="section-img" />
+            <p>The three things we try to bring to work every single day.</p>
+          </div>
+          <div class="row gy-4 mt-3">
+            <div class="col-md-4 reveal">
+              <div class="vibe-card" onclick="this.classList.toggle('active')">
+                <i class="fa-solid fa-face-smile"></i>
+                <h3>We Actually Listen</h3>
+                <p class="vibe-desc">No rushed five-minute chats.</p>
+              </div>
+            </div>
+            <div class="col-md-4 reveal">
+              <div class="vibe-card" onclick="this.classList.toggle('active')">
+                <i class="fa-solid fa-hands-holding-child"></i>
+                <h3>We Keep It Human</h3>
+                <p class="vibe-desc">
+                  Machines help us diagnose. People help us heal.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4 reveal">
+              <div class="vibe-card" onclick="this.classList.toggle('active')">
+                <i class="fa-solid fa-bolt"></i>
+                <h3>We Don't Do Slow</h3>
+                <p class="vibe-desc">
+                  Waiting rooms should be short and answers clear.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4 reveal">
+              <div class="vibe-card" onclick="this.classList.toggle('active')">
+                <i class="fa-solid fa-shield-heart"></i>
+                <h3>Total Care Security</h3>
+                <p class="vibe-desc">
+                  Your medical records and privacy are fully protected.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4 reveal">
+              <div class="vibe-card" onclick="this.classList.toggle('active')">
+                <i class="fa-solid fa-user-doctor"></i>
+                <h3>Expert Specialists</h3>
+                <p class="vibe-desc">
+                  Top doctors available across all medical fields.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4 reveal">
+              <div class="vibe-card" onclick="this.classList.toggle('active')">
+                <i class="fa-solid fa-clock"></i>
+                <h3>24/7 Support</h3>
+                <p class="vibe-desc">
+                  We are here to help you around the clock.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="call">
+        <div class="container text-center reveal">
+          <h2>Do You Need Emergency Medical Care?</h2>
+          <p>Our emergency line is open around the clock.</p>
+          <a href="../html/contact.html" class="btn btn-third">Contact Now</a>
+        </div>
+      </section>
+    </main>
+    <!-- Start Footer -->
+    <footer id="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row gy-5">
+            <div class="col-md-6 col-lg-3">
+              <h2>About Us</h2>
+              <hr />
+              <p>
+                Medical Services has been serving our community with
+                trusted, patient-first medical care across every major
+                specialty.
+              </p>
+              <div class="social">
+                <a href="https://www.facebook.com/" target="_blank" aria-label="visit facebook"
+                  ><i class="fa-brands fa-facebook-f"></i
+                ></a>
+                <a href="https://www.google.com/" target="_blank" aria-label="visit google"
+                  ><i class="fa-brands fa-google-plus-g"></i
+                ></a>
+                <a href="https://x.com/" target="_blank" aria-label="visit twitter"
+                  ><i class="fa-brands fa-twitter"></i
+                ></a>
+                <a href="https://vimeo.com/" target="_blank" aria-label="visit vimeo"
+                  ><i class="fa-brands fa-vimeo-v"></i
+                ></a>
+                <a href="https://www.pinterest.com/" target="_blank" aria-label="visit pinterest"
+                  ><i class="fa-brands fa-pinterest-p"></i
+                ></a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <h2>Quick Links</h2>
+              <hr />
+              <ul class="footer-links">
+                <li>
+                  <a href="../index.html"
+                    ><i class="fa-solid fa-caret-right"></i> Home</a
+                  >
+                </li>
+                <li>
+                  <a href="../html/about.html"
+                    ><i class="fa-solid fa-caret-right"></i> About</a
+                  >
+                </li>
+                <li>
+                  <a href="../html/services.html"
+                    ><i class="fa-solid fa-caret-right"></i> Services</a
+                  >
+                </li>
+                <li>
+                  <a href="../html/doctors.html"
+                    ><i class="fa-solid fa-caret-right"></i> Doctors</a
+                  >
+                </li>
+                <li>
+                  <a href="../html/blogs.html"
+                    ><i class="fa-solid fa-caret-right"></i> Blogs</a
+                  >
+                </li>
+                <li>
+                  <a href="../html/contact.html"
+                    ><i class="fa-solid fa-caret-right"></i> Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <h2>Open Hours</h2>
+              <hr />
+              <p>
+                We're here when you need us. Emergency services remain open
+                24 hours a day, every day of the week.
+              </p>
+              <ul class="footer-links no-icon">
+                <li>Monday - Thursday 8:00 - 20:00</li>
+                <li>Saturday 9:00 - 18:00</li>
+                <li>Friday 9:00 - 15:00</li>
+              </ul>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <h2>Newsletter</h2>
+              <hr />
+              <p>
+                Subscribe for the latest hospital news and health advice,
+                straight to your inbox.
+              </p>
+              <form class="footer-newsletter-form" id="footerNewsletterForm" novalidate>
+                <input
+                  type="email"
+                  name="Email"
+                  id="footerNewsletterEmail"
+                  placeholder="Email Address"
+                  required
+                />
+                <button type="submit" aria-label="send mail">
+                  <i class="fa-solid fa-paper-plane"></i>
+                </button>
+              </form>
+              <p class="form-msg" id="footerNewsletterMsg"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>
+          &copy; All Rights Reserved 2026 | Made By<br />
+          <a
+            href="https://www.linkedin.com/in/hedra-victor-4b333033a"
+            target="_blank"
+            >Eng.Hedra Victor</a
+          >
+          & <a href="https://www.linkedin.com/in/arsany-amir-0132173a7" target="_blank">Eng.Arsany Amir</a> &
+          <a
+            href="https://www.linkedin.com/in/persis-magdy-54658740b"
+            target="_blank"
+            >Eng.Persis Magdy</a
+          >
+          & <a href="https://www.linkedin.com/in/marwan-mokhtar-037301229/" target="_blank">Eng.Marwan Mokhtar</a> &
+          <a href="https://eg.linkedin.com/in/ashraf-elhamady-b03962341" target="_blank">Eng.Ashraf Elhamady</a>
+        </p>
+      </div>
+    </footer>
+    <!-- End Footer -->
+    <button type="button" id="backToTop" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <script src="../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+    <script src="../assets/js/firebase-config.js"></script>
+    <script src="../assets/js/nav-auth.js"></script>
+    <script src="../assets/js/transition.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/booking.js"></script>
+    <script src="../assets/js/about.js"></script>
+  </body>
+</html>

@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Medical Services</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon"/>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css" />
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="../assets/icons/fontawesome/css/all.min.css" />
+    <!-- Main Style -->
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <!-- Contact Style -->
+    <link rel="stylesheet" href="../assets/css/contact.css" />
+  </head>
+  <body>
+    <div id="pageLoader"><div class="loader-spinner"></div></div>
+    <!-- Start Navbar -->
+    <nav class="navbar navbar-expand-lg" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">
+          <img
+            src="../assets/images/logo.png"
+            alt="MedStar Hospital"
+            class="logo"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+          aria-controls="navMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/doctors.html">Doctors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/blogs.html">Blogs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="../html/contact.html">Contact</a>
+            </li>
+            <li class="nav-item search-item-mobile d-lg-none">
+              <form class="mobile-search-form" id="mobileSearchForm">
+                <input
+                  type="search"
+                  id="mobileSiteSearch"
+                  placeholder="Search..."
+                  autocomplete="off"
+                />
+                <button type="submit" aria-label="Search">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </form>
+            </li>
+            <li class="nav-item d-lg-none" id="navLoginMobileWrap">
+              <a href="../html/login.html" class="btn btn-primary login-btn-mobile">Login</a>
+            </li>
+            <li class="nav-item d-lg-none d-none" id="navUserMobileWrap">
+              <a href="#" class="btn btn-outline-primary w-100 mb-2" id="navUserLinkMobile"></a>
+              <button type="button" class="btn btn-outline-secondary w-100" id="navLogoutBtnMobile">Logout</button>
+            </li>
+          </ul>
+          <div class="nav-extra d-none d-lg-flex align-items-center">
+            <button
+              type="button"
+              class="search-btn"
+              id="searchButton"
+              aria-label="Open search"
+            >
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <a href="../html/login.html" class="btn btn-primary login-btn" id="navLoginBtn">Login</a>
+            <div class="nav-user d-none" id="navUserDesktop">
+              <a href="#" class="nav-user-link" id="navUserLink"></a>
+              <button type="button" class="btn btn-outline-secondary btn-sm" id="navLogoutBtn">Logout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+    <!-- Start Search Box -->
+    <div class="search-box" id="searchBox">
+      <form id="searchForm">
+        <input
+          type="search"
+          id="siteSearch"
+          placeholder="Search..."
+          autocomplete="off"
+        />
+        <button type="submit" aria-label="Search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+    </div>
+    <!-- End Search Box -->
+    <!-- Start Contact -->
+      <section id="contact">
+        <div class="container">
+          <div class="title reveal text-center">
+            <h2>We Are Always Ready To Help You. Book An Appointment</h2>
+            <img src="../assets/images/section-img.png" alt="section-img" />
+            <p>
+              Fill in your details below and we'll confirm your appointment
+              instantly. No waiting, no phone calls needed.
+            </p>
+          </div>
+          <div class="selected-package-badge d-none" id="selectedPackageBadge">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="selectedPackageText"></span>
+            <button type="button" id="clearPackageBtn" aria-label="Remove selected package">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <div class="row align-items-stretch gy-4 mt-3">
+            <div class="col-lg-6 reveal">
+              <form class="contact-form" id="bookingForm" novalidate>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="Name"
+                      id="patientName"
+                      placeholder="Full Name"
+                      required
+                      minlength="3"
+                    />
+                    <div class="invalid-feedback">Please enter your full name (at least 3 letters).</div>
+                  </div>
+                  <div class="col-md-6">
+                    <input
+                      type="email"
+                      class="form-control"
+                      name="Email"
+                      id="patientEmail"
+                      placeholder="Email"
+                      required
+                    />
+                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <input
+                      type="tel"
+                      class="form-control"
+                      name="Phone"
+                      id="patientPhone"
+                      placeholder="Phone"
+                      required
+                      pattern="^[0-9+\s]{8,15}$"
+                    />
+                    <div class="invalid-feedback">Please enter a valid phone number.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <select class="form-select" name="department" id="patientDepartment" required>
+                      <option value="" selected disabled>Department</option>
+                      <option value="1">General Treatment</option>
+                      <option value="2">Neurology</option>
+                      <option value="3">Ophthalmology</option>
+                      <option value="4">Surgery</option>
+                      <option value="5">Childbirth</option>
+                      <option value="6">Intensive Care</option>
+                      <option value="7">Lab</option>
+                      <option value="8">Cardiology</option>
+                      <option value="9">Dermatology</option>
+                      <option value="10">Dental</option>
+                    </select>
+                    <div class="invalid-feedback">Please choose a department.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <select class="form-select" name="doctor" id="patientDoctor" required>
+                      <option value="" selected disabled>Doctor</option>
+                      <option value="Dr. Zyad Ali">Dr. Zyad Ali</option>
+                      <option value="Dr. Aisha Mostafa">Dr. Aisha Mostafa</option>
+                      <option value="Dr. Mazen Osama">Dr. Mazen Osama</option>
+                      <option value="Dr. Mai Belal">Dr. Mai Belal</option>
+                      <option value="Dr. Mohammed Ahmed">Dr. Mohammed Ahmed</option>
+                      <option value="Dr. Amira Ahmed">Dr. Amira Ahmed</option>
+                      <option value="Dr. Mahmoud Mohamed">Dr. Mahmoud Mohamed</option>
+                      <option value="Dr. Shahd Kamal">Dr. Shahd Kamal</option>
+                      <option value="Dr. Ashraf Ali">Dr. Ashraf Ali</option>
+                      <option value="Dr. Maryam Mustafa">Dr. Maryam Mustafa</option>
+                    </select>
+                    <div class="invalid-feedback">Please choose a doctor.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <input
+                      type="date"
+                      class="form-control"
+                      name="date"
+                      id="patientDate"
+                      required
+                    />
+                    <div class="invalid-feedback">Please choose a valid date (not in the past).</div>
+                  </div>
+                  <div class="col-md-6">
+                    <select class="form-select" name="time" id="patientTime" required disabled>
+                      <option value="" selected disabled>Select doctor &amp; date first</option>
+                    </select>
+                    <div class="invalid-feedback">Please choose an available time slot.</div>
+                  </div>
+                  <div class="col-12">
+                    <textarea
+                      class="form-control"
+                      name="Message"
+                      id="patientMessage"
+                      rows="5"
+                      placeholder="Write Your Message Here..."
+                    ></textarea>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-primary w-auto">
+                      Book An Appointment
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="col-lg-6 space reveal">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5728.361632635108!2d31.731893923246087!3d30.320664034274447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f807611ac773b7%3A0xec40d9ea13c35f1!2z2YXYs9iq2LTZgdmJINin2YTYudin2LTYsSDZhdmGINix2YXYttin2YYg2KfZhNis2KfZhdi52Yo!5e0!3m2!1sar!2seg!4v1786920295287!5m2!1sar!2seg" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact End -->
+      <!-- Start Quick Contact & Donation Section -->
+<section id="quickContactDonation" class="py-4 bg-light border-top border-bottom">
+  <div class="container">
+    <div class="row g-3 justify-content-center align-items-stretch">
+      <!-- Direct Call Card -->
+      <div class="col-md-4">
+        <div class="p-3 bg-white rounded-3 shadow-sm border d-flex align-items-center gap-3 h-100">
+          <div class="icon-badge icon-badge-blue flex-shrink-0" style="width: 50px; height: 50px;">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+          <div class="overflow-hidden">
+            <span class="text-muted small d-block">Direct Call Line</span>
+            <a href="tel:+201234567890" class="fw-bold theme-link text-decoration-none fs-6 d-block text-truncate">+2012xxxxxxxx</a>
+          </div>
+        </div>
+      </div>
+      <!-- WhatsApp Card -->
+      <div class="col-md-4">
+        <div class="p-3 bg-white rounded-3 shadow-sm border d-flex align-items-center gap-3 h-100">
+          <div class="icon-badge icon-badge-blue flex-shrink-0" style="width: 50px; height: 50px;">
+            <i class="fa-brands fa-whatsapp fa-xl"></i>
+          </div>
+          <div class="overflow-hidden">
+            <span class="text-muted small d-block">WhatsApp Support</span>
+            <a href="https://wa.me/201234567890" target="_blank" class="fw-bold theme-link text-decoration-none fs-6 d-block text-truncate">+2010xxxxxxxx</a>
+          </div>
+        </div>
+      </div>
+      <!-- Donation Card -->
+      <div class="col-md-4">
+        <div class="p-3 bg-white rounded-3 shadow-sm border d-flex align-items-center gap-3 h-100">
+          <div class="icon-badge icon-badge-blue flex-shrink-0" style="width: 50px; height: 50px;">
+            <i class="fa-solid fa-hand-holding-heart fa-lg"></i>
+          </div>
+          <div class="overflow-hidden">
+            <span class="text-muted small d-block">Hospital Donation Account</span>
+            <span class="fw-bold theme-link text-decoration-none fs-6 d-block text-truncate" title="IBAN: EG12 0000 xxxx xxxx">IBAN: EG12 0000 xxxx xxxx</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Quick Contact & Donation Section -->
+      <!-- Start Patient Reviews & Live Slots -->
+      <section id="patientTrust" class="py-5 bg-light border-top">
+        <div class="container">
+          <div class="row align-items-center gy-4">
+            <!-- Live Slots Card -->
+            <div class="col-lg-4">
+              <div class="card border-0 shadow-sm bg-primary text-white p-3 text-center">
+                <div class="card-body">
+                  <i class="fa-solid fa-user-clock fa-3x mb-3 text-white-50"></i>
+                  <h4 class="fw-bold">Today's Availability</h4>
+                  <div class="display-5 fw-bold my-2" id="slotsCounter">7</div>
+                  <p class="mb-0 text-white-50">Slots remaining for today's consultations.</p>
+                </div>
+              </div>
+            </div>
+            <!-- Testimonials -->
+            <div class="col-lg-8">
+              <h4 class="fw-bold text-dark mb-3">What Our Patients Say</h4>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="p-3 bg-white rounded-3 shadow-sm border">
+                    <div class="text-warning mb-2">
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="small text-muted mb-2">"Booking online was super fast. Received my SMS confirmation within minutes and no wait time at the Hospital."</p>
+                    <h6 class="fw-bold text-dark mb-0">— Sarah M.</h6>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="p-3 bg-white rounded-3 shadow-sm border">
+                    <div class="text-warning mb-2">
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="small text-muted mb-2">"Very professional medical team and easy booking system. Highly recommend Medical Services Hospital!"</p>
+                    <h6 class="fw-bold text-dark mb-0">— Ahmed K.</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Patient Reviews & Live Slots -->
+      <!-- Start Emergency Bar -->
+      <div class="bg-primary text-white shadow-sm" style="display: flex; align-items: center; justify-content: center; min-height: 70px; padding: 15px 0;">
+        <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
+          <div class="d-flex align-items-center gap-2">
+            <i class="fa-solid fa-triangle-exclamation fs-5"></i>
+            <span class="fw-bold fs-6">Medical Emergency?</span>
+            <span class="d-none d-md-inline">Our emergency services are available 24/7.</span>
+          </div>
+          <a href="tel:12345" class="btn btn-sm btn-light text-primary fw-bold rounded-pill px-3">
+            <i class="fa-solid fa-phone me-1"></i> Call Emergency: 12345
+          </a>
+        </div>
+      </div>
+      <!-- End Emergency Bar -->
+      <!-- Start Booking Highlights -->
+      <div class="container my-4">
+        <div class="row g-3 text-center">
+          <div class="col-md-4">
+            <div class="p-3 bg-white rounded-3 shadow-sm border border-light">
+              <i class="fa-solid fa-bolt text-primary fa-2x mb-2"></i>
+              <h6 class="fw-bold mb-1">Instant Confirmation</h6>
+              <small class="text-muted">No waiting time for phone calls</small>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-3 bg-white rounded-3 shadow-sm border border-light">
+              <i class="fa-solid fa-shield-halved text-primary fa-2x mb-2"></i>
+              <h6 class="fw-bold mb-1">100% Secure & Private</h6>
+              <small class="text-muted">Your medical data is encrypted</small>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-3 bg-white rounded-3 shadow-sm border border-light">
+              <i class="fa-solid fa-calendar-xmark text-primary fa-2x mb-2"></i>
+              <h6 class="fw-bold mb-1">Free Cancellation</h6>
+              <small class="text-muted">Cancel up to 2 hours before</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- End Booking Highlights -->
+      <!-- Start Newsletter -->
+      <section id="newsletter" class="section-padding-sm">
+        <div class="container">
+          <div class="row align-items-center gy-3 reveal">
+            <div class="col-lg-6">
+              <h2>Sign Up For Newsletter</h2>
+              <p>
+                Get health tips, hospital news and exclusive offers
+                delivered straight to your inbox.
+              </p>
+            </div>
+            <div class="col-lg-6">
+              <form class="newsletter-form" id="newsletterForm" novalidate>
+                <input
+                  type="email"
+                  name="Email"
+                  id="newsletterEmail"
+                  placeholder="Your Email Address"
+                  required
+                />
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+              </form>
+              <p class="form-msg" id="newsletterMsg"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Newsletter -->   
+    <!-- Start Footer -->
+    <footer id="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row gy-5">
+            <div class="col-md-6 col-lg-3">
+              <h2>About Us</h2>
+              <hr />
+              <p>
+                Medical Services has been serving our community with
+                trusted, patient-first medical care across every major
+                specialty.
+              </p>
+              <div class="social">
+                <a href="https://www.facebook.com/" target="_blank" aria-label="visit facebook"
+                  ><i class="fa-brands fa-facebook-f"></i
+                ></a>
+                <a href="https://www.google.com/" target="_blank" aria-label="visit google"
+                  ><i class="fa-brands fa-google-plus-g"></i
+                ></a>
+                <a href="https://x.com/" target="_blank" aria-label="visit twitter"
+                  ><i class="fa-brands fa-twitter"></i
+                ></a>
+                <a href="https://vimeo.com/" target="_blank" aria-label="visit vimeo"
+                  ><i class="fa-brands fa-vimeo-v"></i
+                ></a>
+                <a href="https://www.pinterest.com/" target="_blank" aria-label="visit pinterest"
+                  ><i class="fa-brands fa-pinterest-p"></i
+                ></a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <h2>Quick Links</h2>
+              <hr />
+              <ul class="footer-links">
+                <li>
+                  <a href="../index.html"
+                    ><i class="fa-solid fa-caret-right"></i> Home</a
+                  >
+                </li>
+                <li>
+                  <a href="../html/about.html"
+                    ><i class="fa-solid fa-caret-right"></i> About</a
+                  >
+                </li>
+                <li>
+                  <a href="../html/services.html"
+                    ><i class="fa-solid fa-caret-right"></i> Services</a
+                  >
+                </li>
+                <li>
+                  <a href="../html/doctors.html"
+                    ><i class="fa-solid fa-caret-right"></i> Doctors</a
+                  >
+                </li>
+                <li>
+                  <a href="../html/blogs.html"
+                    ><i class="fa-solid fa-caret-right"></i> Blogs</a
+                  >
+                </li>
+                <li>
+                  <a href="../html/contact.html"
+                    ><i class="fa-solid fa-caret-right"></i> Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <h2>Open Hours</h2>
+              <hr />
+              <p>
+                We're here when you need us. Emergency services remain open
+                24 hours a day, every day of the week.
+              </p>
+              <ul class="footer-links no-icon">
+                <li>Monday - Thursday 8:00 - 20:00</li>
+                <li>Saturday 9:00 - 18:00</li>
+                <li>Friday 9:00 - 15:00</li>
+              </ul>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <h2>Newsletter</h2>
+              <hr />
+              <p>
+                Subscribe for the latest hospital news and health advice,
+                straight to your inbox.
+              </p>
+              <form class="footer-newsletter-form" id="footerNewsletterForm" novalidate>
+                <input
+                  type="email"
+                  name="Email"
+                  id="footerNewsletterEmail"
+                  placeholder="Email Address"
+                  required
+                />
+                <button type="submit" aria-label="send mail">
+                  <i class="fa-solid fa-paper-plane"></i>
+                </button>
+              </form>
+              <p class="form-msg" id="footerNewsletterMsg"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>
+          &copy; All Rights Reserved 2026 | Made By<br />
+          <a
+            href="https://www.linkedin.com/in/hedra-victor-4b333033a"
+            target="_blank"
+            >Eng.Hedra Victor</a
+          >
+          & <a href="https://www.linkedin.com/in/arsany-amir-0132173a7" target="_blank">Eng.Arsany Amir</a> &
+          <a
+            href="https://www.linkedin.com/in/persis-magdy-54658740b"
+            target="_blank"
+            >Eng.Persis Magdy</a
+          >
+          & <a href="https://www.linkedin.com/in/marwan-mokhtar-037301229/" target="_blank">Eng.Marwan Mokhtar</a> &
+          <a href="https://eg.linkedin.com/in/ashraf-elhamady-b03962341" target="_blank">Eng.Ashraf Elhamady</a>
+        </p>
+      </div>
+    </footer>
+    <!-- End Footer -->
+    <!-- Back To Top -->
+    <button type="button" id="backToTop" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <!-- Bootstrap JS -->
+    <script src="../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+    <script src="../assets/js/firebase-config.js"></script>
+    <script src="../assets/js/nav-auth.js"></script>
+    <script src="../assets/js/transition.js"></script>
+    <!-- Main JS -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/booking.js"></script>
+    <!-- Contact JS -->
+    <script src="../assets/js/contact.js"></script>
+  </body>
+</html>

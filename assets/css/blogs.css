@@ -1,0 +1,346 @@
+/* Page Loader CSS */
+#pageLoader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition:
+    opacity 0.5s ease,
+    visibility 0.5s ease;
+}
+
+#pageLoader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader-spinner {
+  width: 34px;
+  height: 34px;
+  border: 3px solid #f3f3f3;
+  border-top-color: #1a7bd1;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.blog-hero {
+  height: 600px;
+  background-image: url("../images/back.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  padding-left: 10%;
+  position: relative;
+}
+
+/* Overlay */
+.blog-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.blog-hero-content {
+  position: relative;
+  z-index: 1;
+  width: 500px;
+  margin-top: 50px;
+}
+
+.blog-hero-content span {
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.blog-hero-content h1 {
+  color: white;
+  font-size: 55px;
+  line-height: 1.2;
+  margin: 15px 0;
+}
+
+.blog-hero-content p {
+  color: white;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.hero-btn {
+  display: inline-block;
+  background-color: #1597b5;
+  color: white;
+  padding: 14px 28px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.hero-btn:hover {
+  background-color: #117c96;
+}
+
+.featured-article {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  padding: 100px 10%;
+  background-color: white;
+}
+
+.featured-article.show {
+  display: flex;
+}
+
+.article-content {
+  width: 50%;
+}
+
+.article-content span {
+  color: #1597b5;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.article-content h2 {
+  color: #163b4d;
+  font-size: 40px;
+  margin: 15px 0 20px;
+}
+
+.article-content p {
+  color: #667781;
+  line-height: 1.8;
+}
+
+.article-image {
+  width: 45%;
+}
+
+.article-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Start Blogs */
+#blogs .title {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.blog-card {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.blog-card:hover {
+  transform: translateY(-8px);
+}
+
+.blog-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.blog-content {
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.blog-content::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 3px;
+  background-color: var(--light-blue);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease;
+}
+
+.blog-card:hover .blog-content::before {
+  transform: scaleX(1);
+  transform-origin: right;
+}
+
+.blog-content .date {
+  display: inline-block;
+  padding: 5px 15px;
+  background-color: var(--light-blue);
+  color: #fff;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+.blog-content h3 {
+  margin: 12px 0;
+  font-size: 19px;
+  font-weight: 500;
+}
+/* End Blogs */
+.health-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  padding: 90px 10%;
+  background-color: #f4f9fc;
+}
+
+.health-content {
+  width: 50%;
+}
+
+.health-content span {
+  color: #1597b5;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.health-content h2 {
+  color: #163b4d;
+  font-size: 42px;
+  line-height: 1.2;
+  margin: 15px 0 25px;
+}
+
+.health-content p {
+  color: #667781;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+.health-content h3 {
+  color: #1597b5;
+  font-size: 18px;
+  margin-top: 25px;
+}
+
+.health-image {
+  width: 45%;
+}
+
+.health-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Responsive */
+@media (min-width: 768px) and (max-width: 991px) {
+  #blogs .col-lg-4 {
+    width: 50%;
+  }
+}
+
+@media (max-width: 992px) {
+  .featured-article {
+    flex-direction: column;
+    padding: 50px 5%;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .article-content,
+  .article-image {
+    width: 100%;
+  }
+
+  .article-content h2 {
+    font-size: 28px;
+  }
+
+  .article-image img {
+    height: 500px;
+  }
+
+  .health-section {
+    flex-direction: column;
+    padding: 50px 5%;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .health-content,
+  .health-image {
+    width: 100%;
+  }
+
+  .health-content h2 {
+    font-size: 30px;
+  }
+
+  .health-image img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .health-section {
+    flex-direction: column;
+
+    padding: 60px 5%;
+
+    text-align: center;
+  }
+
+  .health-content {
+    width: 100%;
+  }
+
+  .health-image {
+    width: 100%;
+  }
+
+  .health-image img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .blog-hero {
+    padding-top: 140px;
+  }
+
+  .blog-hero-content h1 {
+    font-size: 24px;
+  }
+
+  .article-content h2,
+  .health-content h2 {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,887 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medical Services</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon"/>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css" />
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="./assets/icons/fontawesome/css/all.min.css" />
+    <!-- Style -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div id="pageLoader"><div class="loader-spinner"></div></div>
+    <!-- Start Home -->
+    <header id="home">
+      <!-- Start Navbar -->
+      <nav class="navbar navbar-expand-lg" id="mainNav">
+        <div class="container">
+          <a class="navbar-brand" href="../html/index.html">
+            <img
+              src="./assets/images/logo.png"
+              alt="Medical Services"
+              class="logo"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navMenu"
+            aria-controls="navMenu"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+              <li class="nav-item">
+                <a class="nav-link active" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./html/about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./html/services.html">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./html/doctors.html">Doctors</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./html/blogs.html">Blogs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./html/contact.html">Contact</a>
+              </li>
+              <!-- Search + Login (Mobile only, inside the menu) -->
+              <li class="nav-item search-item-mobile d-lg-none">
+                <form class="mobile-search-form" id="mobileSearchForm">
+                  <input
+                    type="search"
+                    id="mobileSiteSearch"
+                    placeholder="Search..."
+                    autocomplete="off"
+                  />
+                  <button type="submit" aria-label="Search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </button>
+                </form>
+              </li>
+              <li class="nav-item d-lg-none" id="navLoginMobileWrap">
+              <a href="./html/login.html" class="btn btn-primary login-btn-mobile">Login</a>
+            </li>
+            <li class="nav-item d-lg-none d-none" id="navUserMobileWrap">
+              <a href="#" class="btn btn-outline-primary w-100 mb-2" id="navUserLinkMobile"></a>
+              <button type="button" class="btn btn-outline-secondary w-100" id="navLogoutBtnMobile">Logout</button>
+            </li>
+            </ul>
+            <!-- Search + Login (Desktop only) -->
+            <div class="nav-extra d-none d-lg-flex align-items-center">
+              <button
+                type="button"
+                class="search-btn"
+                id="searchButton"
+                aria-label="Open search"
+              >
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+              <a href="./html/login.html" class="btn btn-primary login-btn" id="navLoginBtn">Login</a>
+            <div class="nav-user d-none" id="navUserDesktop">
+              <a href="#" class="nav-user-link" id="navUserLink"></a>
+              <button type="button" class="btn btn-outline-secondary btn-sm" id="navLogoutBtn">Logout</button>
+            </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+      <!-- Start Search Box -->
+      <div class="search-box" id="searchBox">
+        <form id="searchForm">
+          <input
+            type="search"
+            id="siteSearch"
+            placeholder="Search..."
+            autocomplete="off"
+          />
+          <button type="submit" aria-label="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+      </div>
+      <!-- End Search Box -->
+      <!-- Start Home Content -->
+      <div class="home-content">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6 home-text">
+              <small class="anim-text">
+                <img src="./assets/images/section-img.png" alt="section-img" />
+                WE GIVE YOU THE BEST!
+              </small>
+              <h1 class="anim-text">
+                We Provide <span class="text-primary">Medical</span> Services
+                That You Can <span class="text-primary">Trust!</span>
+              </h1>
+              <p class="anim-text">
+                Need Professional Help? Our Support Staff Will Answer Your
+                Questions. Visit Us Now Or Make An Appointment!
+              </p>
+              <div class="home-btns">
+                <a href="./html/contact.html" class="btn btn-primary anim-btn"
+                  >Get Appointment</a
+                >
+                <a
+                  href="#contact"
+                  class="btn btn-secondary anim-btn"
+                  >Contact Now</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Home Content -->
+    </header>
+    <!-- End Home -->
+    <main>
+      <!-- Start About -->
+      <section id="about" class="section-padding">
+        <div class="container">
+          <div class="title reveal">
+            <h2>Trusted Medical Care For You And Your Family</h2>
+            <img src="./assets/images/section-img.png" alt="section-img" />
+            <p>
+              A full range of specialized departments, modern equipment and a
+              caring team, all working together for your health.
+            </p>
+          </div>
+          <div class="row align-items-center gy-4 mt-3">
+            <div class="col-lg-6 reveal">
+              <h3>Who We Are</h3>
+              <hr class="short-hr" />
+              <p>
+                We Take Health Care Personally At Medstar Hospital. Because
+                Excellence In Health Care Is About More Just Medicine,
+                Technology, Tests And Treatments.
+              </p>
+              <p>
+                It Is About Really Caring For People With Dignity And Respect.
+                That's What We Do. We Are Dedicated To Providing The Best Care
+                To Meet The Need Of People For Our Community, For Our Patients
+                -- For You.
+              </p>
+              <div class="row check-list">
+                <div class="col-6">
+                  <ul>
+                    <li><i class="fa-solid fa-circle-play"></i> Certified Specialist Doctors</li>
+                    <li><i class="fa-solid fa-circle-play"></i> 24/7 Emergency Care</li>
+                    <li><i class="fa-solid fa-circle-play"></i> Modern Medical Equipment</li>
+                  </ul>
+                </div>
+                <div class="col-6">
+                  <ul>
+                    <li><i class="fa-solid fa-circle-play"></i> Affordable Treatment Plans</li>
+                    <li><i class="fa-solid fa-circle-play"></i> Fully Equipped Pharmacy</li>
+                    <li><i class="fa-solid fa-circle-play"></i> Friendly Support Staff</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 reveal">
+              <img
+                src="./assets/images/about-img.png"
+                alt="about-img"
+                class="img-fluid rounded"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End About -->
+      <!-- Start Info -->
+      <section id="info" class="section-padding">
+        <div class="container">
+          <div class="row text-center gy-4">
+            <div class="col-6 col-lg-3 reveal">
+              <div class="info-box">
+                <i class="fa-solid fa-house-chimney"></i>
+                <div>
+                  <span class="counter-plus">+</span><span class="counter" data-target="3468">0</span>
+                  <p>Hospital Rooms</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3 reveal">
+              <div class="info-box">
+                <i class="fa-solid fa-user"></i>
+                <div>
+                  <span class="counter-plus">+</span><span class="counter" data-target="557">0</span>
+                  <p>Specialist Doctors</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3 reveal">
+              <div class="info-box">
+                <i class="fa-solid fa-face-smile-beam"></i>
+                <div>
+                  <span class="counter-plus">+</span><span class="counter" data-target="4379">0</span>
+                  <p>Happy Patients</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3 reveal">
+              <div class="info-box">
+                <i class="fa-solid fa-table-list"></i>
+                <div>
+                  <span class="counter-plus">+</span><span class="counter" data-target="32">0</span>
+                  <p>Years Of Experience</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Info -->
+      <!-- Start Help -->
+      <section id="help" class="section-padding">
+        <div class="container">
+          <div class="title reveal">
+            <h2>We Are Always Ready To Help You &amp; Your Family</h2>
+            <img src="./assets/images/section-img.png" alt="section-img" />
+            <p>
+              Whatever the situation, our team is one call away, day and
+              night, to give you the care you need.
+            </p>
+          </div>
+          <div class="row text-center gy-5 mt-3 help-row">
+            <div class="col-md-4 reveal">
+              <i class="fa-solid fa-truck-medical"></i>
+              <h3>Emergency Help</h3>
+              <p>
+                Our emergency unit operates 24/7 with a fully equipped
+                ambulance fleet and a rapid-response medical team.
+              </p>
+            </div>
+            <div class="col-md-4 reveal">
+              <i class="fa-solid fa-heart-pulse"></i>
+              <h3>Enriched Pharmacy</h3>
+              <p>
+                An in-house pharmacy stocked with a wide range of medicines,
+                staffed by licensed pharmacists to guide every prescription.
+              </p>
+            </div>
+            <div class="col-md-4 reveal">
+              <i class="fa-solid fa-stethoscope"></i>
+              <h3>Medical Treatment</h3>
+              <p>
+                Accurate diagnosis and personalized treatment plans led by
+                specialist doctors across all major departments.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Help -->
+      <!-- Start Call -->
+      <section id="call">
+        <div class="container text-center reveal">
+          <h2>Do You Need Emergency Medical Care?  medicalservices@gmail.com</h2>
+          <p>
+            Our emergency line is open around the clock. Reach out any time
+            and our team will be ready to assist you and your family.
+          </p>
+          <a href="./html/contact.html" class="btn btn-third">Contact Now</a>
+          <a href="./html/about.html" class="btn btn-forth"
+            >Learn More <i class="fa-solid fa-arrow-right-long"></i
+          ></a>
+        </div>
+      </section>
+      <!-- End Call -->
+      <!-- Start Services -->
+      <section id="services" class="section-padding">
+        <div class="container">
+          <div class="title reveal">
+            <h2>We Offer Different Services To Improve Your Health</h2>
+            <img src="./assets/images/section-img.png" alt="section-img" />
+            <p>
+              From routine checkups to specialized surgery, our departments
+              cover everything your family needs under one roof.
+            </p>
+          </div>
+          <div class="row gy-5 mt-3">
+            <div class="col-md-6 col-lg-4 service-item reveal">
+              <i class="fa-solid fa-rectangle-list"></i>
+              <div>
+                <h3>General Treatment</h3>
+                <p>Checkups, diagnosis and follow-up care for everyday health concerns, handled by our general practitioners.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 service-item reveal">
+              <i class="fa-solid fa-tooth"></i>
+              <div>
+                <h3>Dental Care</h3>
+                <p>Teeth cleaning, whitening and restorative dentistry performed with modern, pain-free techniques.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 service-item reveal">
+              <i class="fa-solid fa-heart-pulse"></i>
+              <div>
+                <h3>Cardiac Care</h3>
+                <p>Heart screening, catheterization and surgery led by our cardiology team using advanced monitoring tools.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 service-item reveal">
+              <i class="fa-solid fa-ear-listen"></i>
+              <div>
+                <h3>ENT Treatment</h3>
+                <p>Diagnosis and treatment for ear, nose and throat conditions for both children and adults.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 service-item reveal">
+              <i class="fa-solid fa-eye"></i>
+              <div>
+                <h3>Eye Care</h3>
+                <p>Complete vision testing, treatment of eye conditions and surgical procedures by our ophthalmologists.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 service-item reveal">
+              <i class="fa-solid fa-droplet"></i>
+              <div>
+                <h3>Blood Transfusion</h3>
+                <p>A fully stocked blood bank with rigorous safety screening, available around the clock for patients in need.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Services -->
+      <!-- Start Price List -->
+      <section id="price-list" class="section-padding">
+        <div class="container">
+          <div class="title reveal">
+            <h2>We Provide You The Best Treatment In Reasonable Price</h2>
+            <img src="./assets/images/section-img.png" alt="section-img" />
+            <p>
+              Clear pricing, no hidden fees. Pick the plan that fits your
+              need and book your visit in seconds.
+            </p>
+          </div>
+          <div class="row gy-4 mt-3 justify-content-center">
+            <div class="col-md-6 col-lg-4 reveal">
+              <div class="price-card book-package" data-package="Plastic Surgery" data-department="4">
+                <div class="price-details">
+                  <i class="fa-solid fa-scissors fa-rotate-270"></i>
+                  <h3>Plastic Surgery</h3>
+                  <p class="price">$199 <span>/ visit</span></p>
+                </div>
+                <ul>
+                  <li>Consultation Included <i class="fa-solid fa-circle-check"></i></li>
+                  <li>Pre-Op Assessment <i class="fa-solid fa-circle-check"></i></li>
+                  <li>Post-Op Follow-Up <i class="fa-solid fa-circle-xmark"></i></li>
+                  <li>Private Room <i class="fa-solid fa-circle-xmark"></i></li>
+                  <li>Free Second Opinion <i class="fa-solid fa-circle-xmark"></i></li>
+                </ul>
+                <button type="button" class="btn btn-primary book-now-btn">Book Now</button>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 reveal">
+              <div class="price-card book-package" data-package="Dental Care" data-department="2">
+                <div class="price-details">
+                  <i class="fa-solid fa-tooth"></i>
+                  <h3>Dental Care</h3>
+                  <p class="price">$99 <span>/ visit</span></p>
+                </div>
+                <ul>
+                  <li>Consultation Included <i class="fa-solid fa-circle-check"></i></li>
+                  <li>Teeth Cleaning <i class="fa-solid fa-circle-check"></i></li>
+                  <li>Whitening Session <i class="fa-solid fa-circle-check"></i></li>
+                  <li>Private Room <i class="fa-solid fa-circle-xmark"></i></li>
+                  <li>Free Second Opinion <i class="fa-solid fa-circle-xmark"></i></li>
+                </ul>
+                <button type="button" class="btn btn-primary book-now-btn">Book Now</button>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 reveal">
+              <div class="price-card book-package" data-package="Heart Surgery" data-department="4">
+                <div class="price-details">
+                  <i class="fa-solid fa-heart-pulse"></i>
+                  <h3>Heart Surgery</h3>
+                  <p class="price">$399 <span>/ visit</span></p>
+                </div>
+                <ul>
+                  <li>Consultation Included <i class="fa-solid fa-circle-check"></i></li>
+                  <li>Full Cardiac Screening <i class="fa-solid fa-circle-check"></i></li>
+                  <li>Post-Op Follow-Up <i class="fa-solid fa-circle-check"></i></li>
+                  <li>Private Room <i class="fa-solid fa-circle-check"></i></li>
+                  <li>Free Second Opinion <i class="fa-solid fa-circle-check"></i></li>
+                </ul>
+                <button type="button" class="btn btn-primary book-now-btn">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Price List -->
+      <!-- Start Brand -->
+      <section id="brand" class="section-padding">
+        <div class="container">
+          <div
+            class="row align-items-center justify-content-between brand-row reveal"
+          >
+            <div class="col-6 col-md-3 text-center">
+              <img
+                src="./assets/images/brand-1.png"
+                alt="brand-1"
+                class="img-fluid"
+              />
+            </div>
+            <div class="col-6 col-md-3 text-center">
+              <img
+                src="./assets/images/brand-2.png"
+                alt="brand-2"
+                class="img-fluid"
+              />
+            </div>
+            <div class="col-6 col-md-3 text-center">
+              <img
+                src="./assets/images/brand-3.png"
+                alt="brand-3"
+                class="img-fluid"
+              />
+            </div>
+            <div class="col-6 col-md-3 text-center">
+              <img
+                src="./assets/images/brand-4.png"
+                alt="brand-4"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Brand -->
+      <!-- Start Doctors -->
+      <section id="doctors" class="section-padding">
+        <div class="container">
+          <div class="title reveal">
+            <h2>Meet Our Experienced Doctors</h2>
+            <img src="./assets/images/section-img.png" alt="section-img" />
+            <p>
+              A team of certified specialists dedicated to giving you and
+              your family the attention you deserve.
+            </p>
+          </div>
+          <div class="doctors-slider reveal mt-4" id="doctorsSlider">
+            <div class="doctors-track" id="doctorsTrack">
+              <div class="doctor-card">
+                <img src="./assets/images/doc1.png" alt="Dr. Zyad Ali" />
+                <div class="doctor-details">
+                  <h3>Dr. Zyad Ali</h3>
+                  <p>Surgeon</p>
+                </div>
+              </div>
+              <div class="doctor-card">
+                <img src="./assets/images/doc2.png" alt="Dr. Aisha Mostafa" />
+                <div class="doctor-details">
+                  <h3>Dr. Aisha Mostafa</h3>
+                  <p>Ophthalmology</p>
+                </div>
+              </div>
+              <div class="doctor-card">
+                <img src="./assets/images/doc3.png" alt="Dr. Mazen Osama" />
+                <div class="doctor-details">
+                  <h3>Dr. Mazen Osama</h3>
+                  <p>Dentist</p>
+                </div>
+              </div>
+              <div class="doctor-card">
+                <img src="./assets/images/doc4.png" alt="Dr. Mai Belal" />
+                <div class="doctor-details">
+                  <h3>Dr. Mai Belal</h3>
+                  <p>General Treatment</p>
+                </div>
+              </div>
+              <div class="doctor-card">
+                <img src="./assets/images/doc5.png" alt="Dr. Mohammed Ahmed" />
+                <div class="doctor-details">
+                  <h3>Dr. Mohammed Ahmed</h3>
+                  <p>childbirth</p>
+                </div>
+              </div>
+              <div class="doctor-card">
+                <img src="./assets/images/doc6.png" alt="Dr. Amira Ahmed" />
+                <div class="doctor-details">
+                  <h3>Dr. Amira Ahmed</h3>
+                  <p>Intensive Care</p>
+                </div>
+              </div>
+              <div class="doctor-card">
+                <img src="./assets/images/doc7.png" alt="Dr. Mahmoud Mohamed" />
+                <div class="doctor-details">
+                  <h3>Dr. Mahmoud Mohamed</h3>
+                  <p>Cardiology</p>
+                </div>
+              </div>
+              <div class="doctor-card">
+                <img src="./assets/images/doc8.png" alt="Dr. Shahd Kamal" />
+                <div class="doctor-details">
+                  <h3>Dr. Shahd Kamal</h3>
+                  <p>Lab</p>
+                </div>
+              </div>
+              <div class="doctor-card">
+                <img src="./assets/images/doc9.png" alt="Dr. Ashraf Ali" />
+                <div class="doctor-details">
+                  <h3>Dr. Ashraf Ali</h3>
+                  <p>Dermatology</p>
+                </div>
+              </div>
+              <div class="doctor-card">
+                <img src="./assets/images/doc10.png" alt="Dr. Maya Khalid" />
+                <div class="doctor-details">
+                  <h3>Dr. Maya Khalid</h3>
+                  <p>Neurology</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Doctors -->
+      <!-- Start Blogs -->
+      <section id="blogs" class="section-padding">
+        <div class="container">
+          <div class="title reveal">
+            <h2>Keep Up With Our Most Recent Medical News</h2>
+            <img src="./assets/images/section-img.png" alt="section-img" />
+            <p>
+              Health tips, hospital updates and medical insights from our
+              specialists, published regularly.
+            </p>
+          </div>
+          <div class="row gy-4 mt-3">
+            <div class="col-lg-4 reveal">
+              <div class="blog-card">
+                <img src="./assets/images/blog-1.jpeg" alt="Blog 1" />
+                <div class="blog-content">
+                  <p class="date">22 Aug, 2026</p>
+                  <h3>5 Signs You Shouldn't Ignore Before Seeing A Doctor</h3>
+                  <p>
+                    Persistent fatigue, unexplained pain or sudden weight
+                    change can be early warning signs. Learn when it's time
+                    to book a checkup.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 reveal">
+              <div class="blog-card">
+                <img src="./assets/images/blog-2.jpeg" alt="Blog 2" />
+                <div class="blog-content">
+                  <p class="date">30 Dec, 2026</p>
+                  <h3>Top Five Ways For Solving Teeth Problems</h3>
+                  <p>
+                    From daily flossing to regular cleanings, our dental team
+                    shares simple habits that protect your smile long term.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 reveal">
+              <div class="blog-card">
+                <img src="./assets/images/blog-3.jpg" alt="Blog 3" />
+                <div class="blog-content">
+                  <p class="date">1 Jan, 2027</p>
+                  <h3>How Regular Checkups Prevent Major Illness</h3>
+                  <p>
+                    Routine screening catches problems early. Here's why an
+                    annual visit matters more than you think.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Blogs -->
+      <!-- Start Contact -->
+      <section id="contact" class="section-padding">
+        <div class="container">
+          <div class="title reveal">
+            <h2>We Are Always Ready To Help You. Book An Appointment</h2>
+            <img src="./assets/images/section-img.png" alt="section-img" />
+            <p>
+              Fill in your details below and we'll confirm your appointment
+              instantly. No waiting, no phone calls needed.
+            </p>
+          </div>
+          <div class="selected-package-badge d-none" id="selectedPackageBadge">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="selectedPackageText"></span>
+            <button type="button" id="clearPackageBtn" aria-label="Remove selected package">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <div class="row align-items-stretch gy-4 mt-3">
+            <div class="col-lg-6 reveal">
+              <form class="contact-form" id="bookingForm" novalidate>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="Name"
+                      id="patientName"
+                      placeholder="Full Name"
+                      required
+                      minlength="3"
+                    />
+                    <div class="invalid-feedback">Please enter your full name (at least 3 letters).</div>
+                  </div>
+                  <div class="col-md-6">
+                    <input
+                      type="email"
+                      class="form-control"
+                      name="Email"
+                      id="patientEmail"
+                      placeholder="Email"
+                      required
+                    />
+                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <input
+                      type="tel"
+                      class="form-control"
+                      name="Phone"
+                      id="patientPhone"
+                      placeholder="Phone"
+                      required
+                      pattern="^[0-9+\s]{8,15}$"
+                    />
+                    <div class="invalid-feedback">Please enter a valid phone number.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <select class="form-select" name="department" id="patientDepartment" required>
+                      <option value="" selected disabled>Department</option>
+                      <option value="1">General Treatment</option>
+                      <option value="2">Neurology</option>
+                      <option value="3">Ophthalmology</option>
+                      <option value="4">Surgery</option>
+                      <option value="5">Childbirth</option>
+                      <option value="6">Intensive Care</option>
+                      <option value="7">Lab</option>
+                      <option value="8">Cardiology</option>
+                      <option value="9">Dermatology</option>
+                      <option value="10">Dental</option>
+                    </select>
+                    <div class="invalid-feedback">Please choose a department.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <select class="form-select" name="doctor" id="patientDoctor" required>
+                      <option value="" selected disabled>Doctor</option>
+                      <option value="Dr. Zyad Ali">Dr. Zyad Ali</option>
+                      <option value="Dr. Aisha Mostafa">Dr. Aisha Mostafa</option>
+                      <option value="Dr. Mazen Osama">Dr. Mazen Osama</option>
+                      <option value="Dr. Mai Belal">Dr. Mai Belal</option>
+                      <option value="Dr. Mohammed Ahmed">Dr. Mohammed Ahmed</option>
+                      <option value="Dr. Amira Ahmed">Dr. Amira Ahmed</option>
+                      <option value="Dr. Mahmoud Mohamed">Dr. Mahmoud Mohamed</option>
+                      <option value="Dr. Shahd Kamal">Dr. Shahd Kamal</option>
+                      <option value="Dr. Ashraf Ali">Dr. Ashraf Ali</option>
+                      <option value="Dr. Maya Khalid">Dr. Maya Khalid</option>
+                    </select>
+                    <div class="invalid-feedback">Please choose a doctor.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <input
+                      type="date"
+                      class="form-control"
+                      name="date"
+                      id="patientDate"
+                      required
+                    />
+                    <div class="invalid-feedback">Please choose a valid date (not in the past).</div>
+                  </div>
+                  <div class="col-md-6">
+                    <select class="form-select" name="time" id="patientTime" required disabled>
+                      <option value="" selected disabled>Select doctor &amp; date first</option>
+                    </select>
+                    <div class="invalid-feedback">Please choose an available time slot.</div>
+                  </div>
+                  <div class="col-12">
+                    <textarea
+                      class="form-control"
+                      name="Message"
+                      id="patientMessage"
+                      rows="5"
+                      placeholder="Write Your Message Here..."
+                    ></textarea>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-primary w-auto">
+                      Book An Appointment
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="col-lg-6 space reveal">
+              <img
+                src="./assets/images/contact.jpg"
+                alt="Contact"
+                class="img-fluid rounded contact-img"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Contact -->
+    </main>
+    <!-- Start Footer -->
+    <footer id="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row gy-5">
+            <div class="col-md-6 col-lg-3">
+              <h2>About Us</h2>
+              <hr />
+              <p>
+                Medical Services has been serving our community with
+                trusted, patient-first medical care across every major
+                specialty.
+              </p>
+              <div class="social">
+                <a href="https://www.facebook.com/" target="_blank" aria-label="visit facebook"
+                  ><i class="fa-brands fa-facebook-f"></i
+                ></a>
+                <a href="https://www.google.com/" target="_blank" aria-label="visit google"
+                  ><i class="fa-brands fa-google-plus-g"></i
+                ></a>
+                <a href="https://x.com/" target="_blank" aria-label="visit twitter"
+                  ><i class="fa-brands fa-twitter"></i
+                ></a>
+                <a href="https://vimeo.com/" target="_blank" aria-label="visit vimeo"
+                  ><i class="fa-brands fa-vimeo-v"></i
+                ></a>
+                <a href="https://www.pinterest.com/" target="_blank" aria-label="visit pinterest"
+                  ><i class="fa-brands fa-pinterest-p"></i
+                ></a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <h2>Quick Links</h2>
+              <hr />
+              <ul class="footer-links">
+                <li>
+                  <a href="#home"
+                    ><i class="fa-solid fa-caret-right"></i> Home</a
+                  >
+                </li>
+                <li>
+                  <a href="./html/about.html"
+                    ><i class="fa-solid fa-caret-right"></i> About</a
+                  >
+                </li>
+                <li>
+                  <a href="./html/services.html"
+                    ><i class="fa-solid fa-caret-right"></i> Services</a
+                  >
+                </li>
+                <li>
+                  <a href="./html/doctors.html"
+                    ><i class="fa-solid fa-caret-right"></i> Doctors</a
+                  >
+                </li>
+                <li>
+                  <a href="./html/blogs.html"
+                    ><i class="fa-solid fa-caret-right"></i> Blogs</a
+                  >
+                </li>
+                <li>
+                  <a href="./html/contact.html"
+                    ><i class="fa-solid fa-caret-right"></i> Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <h2>Open Hours</h2>
+              <hr />
+              <p>
+                We're here when you need us. Emergency services remain open
+                24 hours a day, every day of the week.
+              </p>
+              <ul class="footer-links no-icon">
+                <li>Monday - Thursday 8:00 - 20:00</li>
+                <li>Saturday 9:00 - 18:00</li>
+                <li>Friday 9:00 - 15:00</li>
+              </ul>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <h2>Newsletter</h2>
+              <hr />
+              <p>
+                Subscribe for the latest hospital news and health advice,
+                straight to your inbox.
+              </p>
+              <form class="footer-newsletter-form" id="footerNewsletterForm" novalidate>
+                <input
+                  type="email"
+                  name="Email"
+                  id="footerNewsletterEmail"
+                  placeholder="Email Address"
+                  required
+                />
+                <button type="submit" aria-label="send mail">
+                  <i class="fa-solid fa-paper-plane"></i>
+                </button>
+              </form>
+              <p class="form-msg" id="footerNewsletterMsg"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>
+          &copy; All Rights Reserved 2026 | Made By<br />
+          <a
+            href="https://www.linkedin.com/in/hedra-victor-4b333033a"
+            target="_blank"
+            >Eng.Hedra Victor</a
+          >
+          & <a href="https://www.linkedin.com/in/arsany-amir-0132173a7" target="_blank">Eng.Arsany Amir</a> &
+          <a
+            href="https://www.linkedin.com/in/persis-magdy-54658740b"
+            target="_blank"
+            >Eng.Persis Magdy</a
+          >
+          & <a href="https://www.linkedin.com/in/marwan-mokhtar-037301229/" target="_blank">Eng.Marwan Mokhtar</a> &
+          <a href="https://eg.linkedin.com/in/ashraf-elhamady-b03962341" target="_blank">Eng.Ashraf Elhamady</a>
+        </p>
+      </div>
+    </footer>
+    <!-- End Footer -->
+    <!-- Back To Top -->
+    <button type="button" id="backToTop" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <!-- Bootstrap JS -->
+    <script src="./assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+    <script src="./assets/js/firebase-config.js"></script>
+    <script src="./assets/js/nav-auth.js"></script>
+    <script src="./assets/js/transition.js"></script>
+    <script src="./assets/js/booking.js"></script>
+    <!-- Index JS -->
+    <script src="./assets/js/index.js"></script>
+  </body>
+</html>

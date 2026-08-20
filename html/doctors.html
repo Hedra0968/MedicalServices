@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctors - Medical Srvices</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon"/>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css" />
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="../assets/icons/fontawesome/css/all.min.css" />
+    <!-- Main Style -->
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <!-- Doctors Style -->
+    <link rel="stylesheet" href="../assets/css/doctors.css" />
+  </head>
+  <body>
+  <div id="pageLoader"><div class="loader-spinner"></div></div>
+    <!-- Start Navbar -->
+    <nav class="navbar navbar-expand-lg" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">
+          <img
+            src="../assets/images/logo.png"
+            alt="MedStar Hospital"
+            class="logo"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+          aria-controls="navMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="../html/doctors.html">Doctors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/blogs.html">Blogs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/contact.html">Contact</a>
+            </li>
+            <li class="nav-item search-item-mobile d-lg-none">
+              <form class="mobile-search-form" id="mobileSearchForm">
+                <input
+                  type="search"
+                  id="mobileSiteSearch"
+                  placeholder="Search..."
+                  autocomplete="off"
+                />
+                <button type="submit" aria-label="Search">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </form>
+            </li>
+            <li class="nav-item d-lg-none">
+              <a
+                href="../html/login.html"
+                class="btn btn-primary login-btn-mobile active"
+                >Login</a
+              >
+            </li>
+          </ul>
+          <div class="nav-extra d-none d-lg-flex align-items-center">
+            <button
+              type="button"
+              class="search-btn"
+              id="searchButton"
+              aria-label="Open search"
+            >
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <a href="../html/login.html" class="btn btn-primary login-btn"
+              >Login</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+    <!-- Start Search Box -->
+    <div class="search-box" id="searchBox">
+      <form id="searchForm">
+        <input
+          type="search"
+          id="siteSearch"
+          placeholder="Search..."
+          autocomplete="off"
+        />
+        <button type="submit" aria-label="Search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+    </div>
+    <!-- End Search Box -->
+    <div class="hero-txt reveal">
+      <h2 class="reveal">Meet Our Experienced Doctors</h>
+      <img class="reveal" src="../assets/images/section-img.png" alt="">
+      <p class="reveal">A team of certified specialists dedicated to giving you and your family the attention you deserve.</p>
+    </div>
+    <section id="sec1-container">
+      <div class="u-parent">
+         <div class="parent-card">
+            <div class="card1-parent cardfront">
+                <img class="doc-img" src="../assets/images/doc1.png">
+                <h1 class="doc-name">Dr. Zyad Ali</h1> 
+                <h2 class="doc-job-title">Surgeon</h2>
+                <button class="c-btn btn btn-primary">read more</button>
+            </div>
+          <div class="cardback">
+    <div class="back-content">
+        <h3 class="back-name">Dr. Zyad Ali</h3>
+        <h4 class="back-specialty">General Surgeon</h4>
+        <div class="back-details">
+            <p><span>Age:</span> 38 Years</p>
+            <p><span>Country:</span> Egypt, Cairo</p>
+            <p><span>Experience:</span> 12+ Years</p>
+        </div>
+        <p class="back-bio">
+            Dr. Zyad Ali is a board-certified surgeon with 12+ years of experience in minimally invasive procedures. He specializes in laparoscopic abdominal surgeries and has successfully performed over 1,500 operations with a high success rate.
+        </p>
+    </div>
+    <a href="./index.html#contact" class="back-btn back-btn1">Make An Appoinment</a>
+    <div class="social-links">
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-linkedin-in"></i>
+        <i class="fa-brands fa-instagram"></i>
+    </div>
+</div>
+        </div>
+        <div class="parent-card">
+            <div class="card2-parent cardfront">
+                <img class="doc-img" src="../assets/images/doc2.png">
+                <h1 class="doc-name">Dr. Aisha Mostafa</h1> 
+                <h2 class="doc-job-title">Ophthalmology</h2>
+                <button class="c-btn btn btn-primary">read more</button>
+            </div>
+          <div class="cardback">
+    <div class="back-content">
+        <h3 class="back-name">Dr. Aisha Mostafa</h3>
+        <h4 class="back-specialty">Ophthalmology</h4>  
+        <div class="back-details">
+            <p><span>Age:</span> 34 Years</p>
+            <p><span>Country:</span> Egypt, Alexandria</p>
+            <p><span>Experience:</span> 9+ Years</p>
+        </div>
+        <p class="back-bio">
+            Dr. Aisha is a board-certified ophthalmologist specializing in cataract and refractive surgeries. 
+            She has performed over 2,000 successful vision correction procedures with modern laser technology.
+            
+        </p>
+    </div>
+    <a href="./index.html#contact" class="back-btn back-btn2">Make An Appoinment</a>
+    <div class="social-links">
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-linkedin-in"></i>
+        <i class="fa-brands fa-instagram"></i>
+    </div>
+</div>
+        </div>
+        <div class="parent-card">
+            <div class="card3-parent cardfront">
+                <img class="doc-img" src="../assets/images/doc3.png">
+                <h1 class="doc-name">Dr. Mazen Osama</h1> 
+                <h2 class="doc-job-title">Dentist</h2>
+                <button class="c-btn btn btn-primary">read more</button>
+            </div>
+<div class="cardback">
+    <div class="back-content">
+        <h3 class="back-name">Dr. Mazen Osama</h3>
+        <h4 class="back-specialty">Dentist</h4>
+        <div class="back-details">
+            <p><span>Age:</span> 45 Years</p>
+            <p><span>Country:</span> Egypt, Cairo</p>
+            <p><span>Experience:</span> 20+ Years</p>
+        </div>
+        <p class="back-bio">
+            Dr. Mazen is a senior dental surgeon with over two decades of experience 
+            in cosmetic and restorative dentistry. He specializes in dental implants, 
+            root canal treatments, and full smile makeovers. Patients trust him for 
+            his gentle approach and exceptional long-term results.
+        </p>
+    </div>
+    <a href="./index.html#contact" class="back-btn back-btn3">Make An Appoinment</a>
+    <div class="social-links">
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-linkedin-in"></i>
+        <i class="fa-brands fa-instagram"></i>
+    </div>
+</div>
+        </div>
+        <div class="parent-card">
+            <div class="card4-parent cardfront">
+                <img class="doc-img" src="../assets/images/doc4.png">
+                <h1 class="doc-name">Dr. Mai Belal</h1> 
+                <h2 class="doc-job-title">General Treatment</h2>
+                <button class="c-btn btn btn-primary">read more</button>
+            </div>
+<div class="cardback">
+    <div class="back-content">
+        <h3 class="back-name">Dr. Mai Belal</h3>
+        <h4 class="back-specialty">General Treatment</h4>
+        <div class="back-details">
+            <p><span>Age:</span> 31 Years</p>
+            <p><span>Country:</span> Egypt, Giza</p>
+            <p><span>Experience:</span> 7+ Years</p>
+        </div>
+        <p class="back-bio">
+            Dr. Mai is a compassionate and dedicated general practitioner known 
+            for her warm bedside manner. She specializes in preventive medicine, 
+            chronic disease management, and comprehensive health checkups for 
+            families. 
+        </p>
+    </div>
+    <a href="./index.html#contact" class="back-btn back-btn4">Make An Appoinment</a>
+    <div class="social-links">
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-linkedin-in"></i>
+        <i class="fa-brands fa-instagram"></i>
+    </div>
+</div>
+        </div>
+        <div class="parent-card">
+            <div class="card5-parent cardfront">
+                <img class="doc-img" src="../assets/images/doc5.png">
+                <h1 class="doc-name">Dr. Mohammed Ahmed</h1> 
+                <h2 class="doc-job-title">childbirth</h2>
+                <button class="c-btn btn btn-primary">read more</button>
+            </div>
+<div class="cardback">
+    <div class="back-content">
+        <h3 class="back-name">Dr. Mohammed Ahmed</h3>
+        <h4 class="back-specialty">Childbirth Specialist</h4>
+        
+        <div class="back-details">
+            <p><span>Age:</span> 36 Years</p>
+            <p><span>Country:</span> Egypt, Cairo</p>
+            <p><span>Experience:</span> 10+ Years</p>
+        </div>
+        <p class="back-bio">
+            Dr. Mohammed is a highly skilled obstetrician and gynecologist dedicated 
+            to ensuring safe and natural childbirth experiences. He specializes in 
+            high-risk pregnancy management, prenatal care, and minimally invasive 
+            gynecological surgeries. His calm, reassuring presence brings comfort 
+            to expecting mothers and their families.
+        </p>
+    </div>
+    <a href="./index.html#contact" class="back-btn back-btn5">Make An Appoinment</a>
+    <div class="social-links">
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-linkedin-in"></i>
+        <i class="fa-brands fa-instagram"></i>
+    </div>
+</div>
+        </div>
+        <div class="parent-card">
+            <div class="card6-parent cardfront">
+                <img class="doc-img" src="../assets/images/doc6.png">
+                <h1 class="doc-name">Dr. Amira Ahmed</h1> 
+                <h2 class="doc-job-title">Intensive Care</h2>
+                <button class="c-btn btn btn-primary">read more</button>
+            </div>
+<div class="cardback">
+    <div class="back-content">
+        <h3 class="back-name">Dr. Amira Ahmed</h3>
+        <h4 class="back-specialty">Intensive Care Specialist</h4>
+        <div class="back-details">
+            <p><span>Age:</span> 33 Years</p>
+            <p><span>Country:</span> Egypt, Alexandria</p>
+            <p><span>Experience:</span> 8+ Years</p>
+        </div>
+        <p class="back-bio">
+            Dr. Amira is a dedicated intensivist with extensive experience managing 
+            critically ill patients in high-pressure ICU environments. She specializes 
+            in acute respiratory distress syndrome, sepsis management, and post-operative 
+            critical care. Her sharp clinical judgment and calm demeanor make her a 
+            trusted leader in emergency medical teams.
+        </p>
+    </div>
+    <a href="./index.html#contact" class="back-btn back-btn6">Make An Appoinment</a>
+    <div class="social-links">
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-linkedin-in"></i>
+        <i class="fa-brands fa-instagram"></i>
+    </div>
+</div>
+        </div>
+        <div class="parent-card">
+            <div class="card7-parent cardfront">
+                <img class="doc-img" src="../assets/images/doc7.png">
+                <h1 class="doc-name">Dr. Mahmoud Mohamed</h1> 
+                <h2 class="doc-job-title">Cardiologyt</h2>
+                <button class="c-btn btn btn-primary">read more</button>
+            </div>
+<div class="cardback">
+    <div class="back-content">
+        <h3 class="back-name">Dr. Mahmoud Mohamed</h3>
+        <h4 class="back-specialty">Cardiologist</h4>
+        <div class="back-details">
+            <p><span>Age:</span> 42 Years</p>
+            <p><span>Country:</span> Egypt, Cairo</p>
+            <p><span>Experience:</span> 15+ Years</p>
+        </div>
+        <p class="back-bio">
+            Dr. Mahmoud is a highly experienced cardiologist dedicated to diagnosing 
+            and treating complex heart conditions. He specializes in interventional 
+            cardiology, heart failure management, and preventative cardiovascular care. 
+            He is known for his thorough consultations and commitment to helping 
+            patients achieve long-term heart health.
+        </p>
+    </div>
+    <a href="./index.html#contact" class="back-btn back-btn7">Make An Appoinment</a>
+    <div class="social-links">
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-linkedin-in"></i>
+        <i class="fa-brands fa-instagram"></i>
+    </div>
+</div>
+        </div>
+        <div class="parent-card">
+            <div class="card8-parent cardfront">
+                <img class="doc-img" src="../assets/images/doc8.png">
+                <h1 class="doc-name">Dr. Shahd Kamal</h1> 
+                <h2 class="doc-job-title">Lab</h2>
+                <button class="c-btn btn btn-primary">read more</button>
+            </div>
+<div class="cardback">
+    <div class="back-content">
+        <h3 class="back-name">Dr. Shahd Kamal</h3>
+        <h4 class="back-specialty">Laboratory & Diagnostic Specialist</h4>
+        <div class="back-details">
+            <p><span>Age:</span> 24 Years</p>
+            <p><span>Country:</span> Egypt, Alexandria</p>
+            <p><span>Experience:</span> 5+ Years</p>
+        </div>
+        <p class="back-bio">
+            Dr. Shahd is a meticulous laboratory medicine specialist with a keen 
+            eye for detail. She excels in clinical pathology, hematology analysis, 
+            and advanced diagnostic testing. Her accuracy and dedication ensure 
+            that every medical report is precise.
+        </p>
+    </div>
+    <a href="./index.html#contact" class="back-btn back-btn8">Make An Appoinment</a>
+    <div class="social-links">
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-linkedin-in"></i>
+        <i class="fa-brands fa-instagram"></i>
+    </div>
+</div>
+        </div>  
+        <div class="parent-card">
+            <div class="card9-parent cardfront">
+                <img class="doc-img" src="../assets/images/doc9.png">
+                <h1 class="doc-name">Dr. Ashraf Ali</h1> 
+                <h2 class="doc-job-title">Dermatology</h2>
+                <button class="c-btn btn btn-primary">read more</button>
+            </div>
+ <div class="cardback">
+    <div class="back-content">
+        <h3 class="back-name">Dr. Ashraf Ali</h3>
+        <h4 class="back-specialty">Dermatologist</h4>
+        <div class="back-details">
+            <p><span>Age:</span> 52 Years</p>
+            <p><span>Country:</span> Egypt, Cairo</p>
+            <p><span>Experience:</span> 25+ Years</p>
+        </div>
+        <p class="back-bio">
+            Dr. Ashraf is a renowned dermatologist with over two decades of experience 
+            in treating complex skin conditions. He specializes in cosmetic dermatology, 
+            skin cancer screenings, and advanced laser therapies. His gentle approach 
+            and unmatched expertise have helped thousands of patients achieve 
+            healthy, radiant skin.
+        </p>
+    </div>
+    <a href="./index.html#contact" class="back-btn back-btn9">Make An Appoinment</a>
+    <div class="social-links">
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-linkedin-in"></i>
+        <i class="fa-brands fa-instagram"></i>
+    </div>
+</div>
+        </div>  
+        <div class="parent-card">
+            <div class="card10-parent cardfront">
+                <img class="doc-img" src="../assets/images/doc10.png">
+                <h1 class="doc-name">Dr. Maya Khalid</h1> 
+                <h2 class="doc-job-title">Neurology</h2>
+                <button class="c-btn btn btn-primary">read more</button>
+            </div>
+<div class="cardback">
+    <div class="back-content">
+        <h3 class="back-name">Dr. Maya Khalid</h3>
+        <h4 class="back-specialty">Neurologist</h4>
+        <div class="back-details">
+            <p><span>Age:</span> 37 Years</p>
+            <p><span>Country:</span> Egypt, Cairo</p>
+            <p><span>Experience:</span> 11+ Years</p>
+        </div>
+        <p class="back-bio">
+            Dr. Maya is a skilled neurologist dedicated to diagnosing and treating 
+            complex disorders of the brain and nervous system. She specializes in 
+            migraine management, epilepsy care, stroke prevention, and multiple 
+            sclerosis treatment. Her empathetic approach and deep medical knowledge 
+            bring comfort and clarity to her patients.
+        </p>
+    </div>
+    <a href="./index.html#contact" class="back-btn back-btn10">Make An Appoinment</a>
+    <div class="social-links">
+      <i class="fa-brands fa-facebook-f"></i>
+      <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-linkedin-in"></i>
+        <i class="fa-brands fa-instagram"></i>
+      </div>
+    </div>
+  </div>  
+</div>
+</section>
+<section id="sec2-container" class="">
+    <div class="booking-content">
+        <h3 class="booking-subtitle reveal">Need A Specialist?</h3>
+        <h1 class="booking-title reveal">Book Your Appointment Today</h1>
+        <p class="booking-details reveal">
+            Our expert medical team is ready to provide you with the best care. 
+            Don't wait – schedule your visit now and take the first step towards better health.
+        </p>
+        <a href="/html/contact.html" class="back-btn sec2-back-btn reveal">Make An Appointment</a>
+    </div>
+</section>
+    <!-- Start Footer -->
+    <footer id="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row gy-5">
+            <div class="col-md-6 col-lg-3">
+              <h2>About Us</h2>
+              <hr />
+              <p>
+                Medical Services has been serving our community with
+                trusted, patient-first medical care across every major
+                specialty.
+              </p>
+              <div class="social">
+                <a href="https://www.facebook.com/" target="_blank" aria-label="visit facebook"
+                  ><i class="fa-brands fa-facebook-f"></i
+                ></a>
+                <a href="https://www.google.com/" target="_blank" aria-label="visit google"
+                  ><i class="fa-brands fa-google-plus-g"></i
+                ></a>
+                <a href="https://x.com/" target="_blank" aria-label="visit twitter"
+                  ><i class="fa-brands fa-twitter"></i
+                ></a>
+                <a href="https://vimeo.com/" target="_blank" aria-label="visit vimeo"
+                  ><i class="fa-brands fa-vimeo-v"></i
+                ></a>
+                <a href="https://www.pinterest.com/" target="_blank" aria-label="visit pinterest"
+                  ><i class="fa-brands fa-pinterest-p"></i
+                ></a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <h2>Quick Links</h2>
+              <hr />
+              <ul class="footer-links">
+                <li>
+                  <a href="../index.html"
+                    ><i class="fa-solid fa-caret-right"></i> Home</a
+                  >
+                </li>
+                <li>
+                  <a href="../html/about.html"
+                    ><i class="fa-solid fa-caret-right"></i> About</a
+                  >
+                </li>
+                <li>
+                  <a href="../html/services.html"
+                    ><i class="fa-solid fa-caret-right"></i> Services</a
+                  >
+                </li>
+                <li>
+                  <a href="../html/doctors.html"
+                    ><i class="fa-solid fa-caret-right"></i> Doctors</a
+                  >
+                </li>
+                <li>
+                  <a href="../html/blogs.html"
+                    ><i class="fa-solid fa-caret-right"></i> Blogs</a
+                  >
+                </li>
+                <li>
+                  <a href="../html/contact.html"
+                    ><i class="fa-solid fa-caret-right"></i> Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <h2>Open Hours</h2>
+              <hr />
+              <p>
+                We're here when you need us. Emergency services remain open
+                24 hours a day, every day of the week.
+              </p>
+              <ul class="footer-links no-icon">
+                <li>Monday - Thursday 8:00 - 20:00</li>
+                <li>Saturday 9:00 - 18:00</li>
+                <li>Friday 9:00 - 15:00</li>
+              </ul>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <h2>Newsletter</h2>
+              <hr />
+              <p>
+                Subscribe for the latest hospital news and health advice,
+                straight to your inbox.
+              </p>
+              <form class="footer-newsletter-form" id="footerNewsletterForm" novalidate>
+                <input
+                  type="email"
+                  name="Email"
+                  id="footerNewsletterEmail"
+                  placeholder="Email Address"
+                  required
+                />
+                <button type="submit" aria-label="send mail">
+                  <i class="fa-solid fa-paper-plane"></i>
+                </button>
+              </form>
+              <p class="form-msg" id="footerNewsletterMsg"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>
+          &copy; All Rights Reserved 2026 | Made By<br />
+          <a
+            href="https://www.linkedin.com/in/hedra-victor-4b333033a"
+            target="_blank"
+            >Eng.Hedra Victor</a
+          >
+          & <a href="https://www.linkedin.com/in/arsany-amir-0132173a7" target="_blank">Eng.Arsany Amir</a> &
+          <a
+            href="https://www.linkedin.com/in/persis-magdy-54658740b"
+            target="_blank"
+            >Eng.Persis Magdy</a
+          >
+          & <a href="https://www.linkedin.com/in/marwan-mokhtar-037301229/" target="_blank">Eng.Marwan Mokhtar</a> &
+          <a href="https://eg.linkedin.com/in/ashraf-elhamady-b03962341" target="_blank">Eng.Ashraf Elhamady</a>
+        </p>
+      </div>
+    </footer>
+    <!-- End Footer -->
+    <!-- Back To Top -->
+    <button type="button" id="backToTop" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <script src="../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+    <script src="../assets/js/firebase-config.js"></script>
+    <script src="../assets/js/nav-auth.js"></script>
+    <script src="../assets/js/transition.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/booking.js"></script>
+    <!-- doctors JS -->
+    <script src="../assets/js/doctors.js"></script>
+  </body>
+</html>
