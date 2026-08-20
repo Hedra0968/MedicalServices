@@ -147,28 +147,33 @@ p {
 /* Mobile search + login (inside collapse menu) */
 .mobile-search-form {
   display: flex;
-  margin: 10px 0;
+  width: 100%;
+  max-width: 100%;
+  margin: 15px 0 10px 0;
+  box-sizing: border-box;
 }
 
 .mobile-search-form input {
   flex: 1;
+  min-width: 0;
   padding: 10px 12px;
   border: 1px solid #ddd;
   border-right: none;
   border-radius: 5px 0 0 5px;
   outline: none;
   font-family: inherit;
+  box-sizing: border-box;
 }
 
 .mobile-search-form button {
   width: 45px;
+  flex-shrink: 0;
   border: none;
   border-radius: 0 5px 5px 0;
   background-color: var(--light-blue);
   color: #fff;
   cursor: pointer;
 }
-
 .login-btn-mobile {
   display: block;
   width: 100%;
