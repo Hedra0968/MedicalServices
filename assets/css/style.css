@@ -1040,6 +1040,22 @@ p {
     color: var(--dark-gray) !important;
   }
 
+  .mobile-search-form {
+    width: 100%;
+    margin: 15px 0 10px 0;
+  }
+
+  .mobile-search-form input {
+    width: 100%;
+  }
+
+  .search-box {
+    width: calc(100% - 30px);
+    right: 15px;
+    left: 15px;
+    transform: translateY(0);
+  }
+
   .home-text h1 {
     font-size: 32px;
   }
