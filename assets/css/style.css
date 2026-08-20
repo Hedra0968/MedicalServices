@@ -848,7 +848,6 @@ p {
   padding: 10px 30px;
 }
 
-
 .form-msg {
   font-size: 13px;
   margin-top: 10px;
@@ -1025,10 +1024,16 @@ p {
 /* Start Responsive */
 @media (max-width: 991px) {
   #mainNav .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 15px;
+    right: 15px;
     background-color: #fff;
-    margin-top: 15px;
+    margin-top: 5px;
     padding: 20px;
     border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    z-index: 1050;
   }
 
   #mainNav .nav-link {
