@@ -27,6 +27,7 @@ if (searchButton && searchBox) {
   document.addEventListener("click", (e) => {
     const clickedInsideBox = searchBox.contains(e.target);
     const clickedButton = searchButton.contains(e.target);
+
     if (!clickedInsideBox && !clickedButton) {
       searchBox.classList.remove("show");
     }
@@ -35,8 +36,12 @@ if (searchButton && searchBox) {
 
 // Close mobile menu automatically
 const navMenu = document.getElementById("navMenu");
+
 if (navMenu) {
-  const navLinks = navMenu.querySelectorAll(".nav-link, .login-btn-mobile");
+  const navLinks = navMenu.querySelectorAll(
+    ".nav-link, .login-btn-mobile"
+  );
+
   navLinks.forEach((link) => {
     link.addEventListener("click", () => {
       const bsCollapse = bootstrap.Collapse.getOrCreateInstance(navMenu);
@@ -45,11 +50,11 @@ if (navMenu) {
   });
 }
 
-// Site Search
+// Site Search Index
 const searchIndex = [
   {
     keywords: ["home", "medstar", "hospital"],
-    page: "index.html",
+    page: "../../index.html",
     hash: "home",
     label: "Home",
   },
@@ -142,41 +147,79 @@ const searchIndex = [
   },
 ];
 
+// Get path back to project root
+function getRootPrefix() {
+  const pathParts = window.location.pathname
+    .split("/")
+    .filter(Boolean);
+
+  // Remove current HTML file
+  if (pathParts.length > 0) {
+    pathParts.pop();
+  }
+
+  return "../".repeat(
+    pathParts.filter((part) => part !== "").length
+  );
+}
+
 function performSearch(query) {
   const q = query.trim().toLowerCase();
+
   if (!q) return;
+
   const match = searchIndex.find((item) =>
-    item.keywords.some((k) => k.includes(q) || q.includes(k)),
+    item.keywords.some(
+      (k) => k.includes(q) || q.includes(k)
+    )
   );
-  const currentFile = location.pathname.split("/").pop() || "index.html";
+
   if (!match) {
     alert(
-      `No results found for "${query}". Try: About, Services, Doctors, Blogs, Contact, Price List, Login.`,
+      `No results found for "${query}". Try: About, Services, Doctors, Blogs, Contact, Price List, Login.`
     );
     return;
   }
-  if (match.page === currentFile) {
-    if (match.hash) {
-      const el = document.getElementById(match.hash);
-      if (el) el.scrollIntoView({ behavior: "smooth" });
-    } else {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
+
+  const rootPrefix = getRootPrefix();
+
+  let targetUrl;
+
+  // Home page is in project root
+  if (match.page === "index.html") {
+    targetUrl = `${rootPrefix}index.html`;
   } else {
-    window.location.href = match.page + (match.hash ? "#" + match.hash : "");
+    // Other main pages are inside html folder
+    targetUrl = `${rootPrefix}html/${match.page}`;
   }
+
+  if (match.hash) {
+    targetUrl += `#${match.hash}`;
+  }
+
+  window.location.href = targetUrl;
 }
 
 function bindSearchForm(formId, inputId) {
   const form = document.getElementById(formId);
   const input = document.getElementById(inputId);
+
   if (!form || !input) return;
+
   form.addEventListener("submit", (e) => {
     e.preventDefault();
+
     performSearch(input.value);
+
     input.value = "";
-    if (searchBox) searchBox.classList.remove("show");
-    if (navMenu) bootstrap.Collapse.getOrCreateInstance(navMenu).hide();
+
+    if (searchBox) {
+      searchBox.classList.remove("show");
+    }
+
+    if (navMenu) {
+      bootstrap.Collapse.getOrCreateInstance(navMenu).hide();
+    }
   });
 }
 
@@ -190,15 +233,22 @@ function animateCounter(el) {
   const target = +el.getAttribute("data-target");
   const duration = 1500; // ms
   const startTime = performance.now();
+
   function update(currentTime) {
-    const progress = Math.min((currentTime - startTime) / duration, 1);
+    const progress = Math.min(
+      (currentTime - startTime) / duration,
+      1
+    );
+
     el.textContent = Math.floor(progress * target);
+
     if (progress < 1) {
       requestAnimationFrame(update);
     } else {
       el.textContent = target;
     }
   }
+
   requestAnimationFrame(update);
 }
 
@@ -212,13 +262,15 @@ if (counters.length) {
         }
       });
     },
-    { threshold: 0.5 },
+    { threshold: 0.5 }
   );
-  counters.forEach((el) => counterObserver.observe(el));
+
+  counters.forEach((el) =>
+    counterObserver.observe(el)
+  );
 }
 
-// Scroll Reveal (used across sections)
-// Any element with class="reveal" fades up into view on scroll
+// Scroll Reveal
 const revealEls = document.querySelectorAll(".reveal");
 
 if (revealEls.length) {
@@ -231,23 +283,24 @@ if (revealEls.length) {
         }
       });
     },
-    { threshold: 0.15 },
+    { threshold: 0.15 }
   );
-  revealEls.forEach((el) => revealObserver.observe(el));
+
+  revealEls.forEach((el) =>
+    revealObserver.observe(el)
+  );
 }
 
-// Doctors Slider: duplicate cards once for a seamless continuous loop
-// (new doctor cards added later are duplicated automatically too)
+// Doctors Slider
 const doctorsTrack = document.getElementById("doctorsTrack");
+
 if (doctorsTrack) {
   doctorsTrack.innerHTML += doctorsTrack.innerHTML;
 }
 
-// Price List "Book Now", Booking form validation/save, and Newsletter forms
-// are all handled in booking.js (Firestore) to avoid duplicate global declarations.
-
 // Back To Top
 const backToTop = document.getElementById("backToTop");
+
 if (backToTop) {
   window.addEventListener("scroll", () => {
     if (window.scrollY > 400) {
@@ -256,8 +309,11 @@ if (backToTop) {
       backToTop.classList.remove("show");
     }
   });
+
   backToTop.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   });
 }
-
