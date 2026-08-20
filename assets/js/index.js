@@ -54,7 +54,7 @@ if (navMenu) {
 const searchIndex = [
   {
     keywords: ["home", "medstar", "hospital"],
-    page: "index.html",
+    page: "../../index.html",
     hash: "home",
     label: "Home",
   },
