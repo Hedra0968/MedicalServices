@@ -517,6 +517,16 @@ p {
   #mainNav .nav-link {
     color: var(--dark-gray) !important;
   }
+
+  .mobile-search-form {
+    width: 100%;
+    margin: 15px 0 10px 0;
+  }
+
+  .mobile-search-form input {
+    width: 100%;
+  }
+
 }
 
 @media (max-width: 767px) {
