@@ -645,168 +645,106 @@
 
 @media (max-width: 500px) {
   #sec1-hero {
-    min-height: 60vh;
+    min-height: 50vh;
     background-position: center;
-    margin-bottom: 2em;
   }
 
-  .hero-main {
-    padding: 20px 15px;
-  }
-
-  .hero-main h2 {
-    margin-top: 7em;
-    width: 100%;
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-
+  .hero-main h2,
   .hero-main p {
-    width: 100%;
-    padding-left: 0;
-    font-size: 14px;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 10px !important;
+    margin: 10px 0 !important;
   }
 
   #sec2-main .u-wrapper {
     width: 95%;
     margin: 0 auto;
     flex-direction: column;
-    margin-bottom: 1em;
-  }
-
-  #sec2-main img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-  }
-
-  #sec2-main h1 {
-    align-self: flex-start;
-  }
-
-  .right-side {
-    width: 100%;
-    margin: 0 !important;
-    align-items: center;
   }
 
   .faq-btn,
   .faq-body {
-    width: 100%;
-    max-width: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
   }
 
-  .faq-body {
-    min-height: 180px;
+  #sec3-main {
+    min-height: auto;
+    padding: 20px 0;
   }
 
   #sec3-main .sec3-wrapper {
-    width: 95%;
+    width: 100%;
+    padding: 0 15px;
     flex-direction: column;
     align-items: center;
   }
 
   .u-card {
-    width: 100%;
-    height: auto;
-    margin-bottom: 25px;
+    width: 100% !important;
+    max-width: 350px !important;
+    height: auto !important;
+    margin: 0 0 25px 0 !important;
   }
 
-  .upper-part {
-    height: 220px;
-  }
-
-  .u-card img {
-    height: 220px;
-  }
-
+  .upper-part,
+  .u-card img,
   .u-card i {
-    height: 220px;
+    height: 200px !important;
   }
 
-  .lower-part {
-    margin: 15px;
-  }
-
-  .card1 .m-bottom {
-    margin-top: 22px !important;
-  }
-
-  .card3 .m-bottom {
-    margin-top: 22px !important;
-  }
-
-  .card4 .m-bottom {
-    margin-top: 22px !important;
-  }
-
-  .card5 .m-bottom {
-    margin-top: 22px !important;
-  }
-
+  .card1 .m-bottom,
+  .card2 .m-bottom,
+  .card3 .m-bottom,
+  .card4 .m-bottom,
+  .card5 .m-bottom,
   .card6 .m-bottom {
-    margin-top: 22px !important;
+    margin-top: 0 !important;
+    margin-bottom: 10px !important;
+  }
+
+  .card4 .services-list,
+  .card2 .services-list {
+    margin-top: 0 !important;
   }
 
   .sec4-upper-parent {
-    justify-content: center;
-    background-position: left top;
-    min-height: 400px;
-    padding: 30px 15px;
+    min-height: auto !important;
+    height: auto !important;
+    padding: 40px 15px !important;
+    background-position: center;
   }
 
   .sec4-content {
-    width: 100%;
-    padding: 0 15px;
-    align-items: center;
-    text-align: center;
-    position: relative;
-  }
-
-  .sec4-subtitle {
-    width: 60%;
-    margin-right: 0;
-    font-size: 18px;
-    position: absolute;
-    top: 45%;
-    left: 20%;
-  }
-
-  .sec4-title {
-    width: 75%;
-    margin-right: 0;
-    font-size: 24px;
-    position: absolute;
-    top: 58%;
-    right: 12% !important;
-  }
-
-  .sec4-details {
-    width: 80%;
-    max-width: 100%;
-    margin: 0 auto;
-    font-size: 14px;
-    position: absolute;
-    bottom: 10%;
-    left: 2%;
-  }
-
-  .lower-parent {
+    width: 100% !important;
+    padding: 0 !important;
+    position: static !important;
+    display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .sec4-card1,
-  .sec4-card2,
-  .sec4-card3 {
-    width: 100%;
-    max-width: 320px;
+  .sec4-subtitle,
+  .sec4-title,
+  .sec4-details {
+    position: static !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 5px 0 !important;
+    right: auto !important;
+    left: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    text-align: center !important;
   }
 
-  p.card-footer {
-    margin-left: 10px;
+  .sec4-title {
+    font-size: 22px !important;
   }
-  .sec4-card1 .card-footer {
-    margin-left: 15px;
+
+  .sec4-details {
+    font-size: 14px !important;
   }
 }
