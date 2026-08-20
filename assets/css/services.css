@@ -536,10 +536,9 @@
     margin-left: 13em !important;
   }
 
-  .u-card {
-    width: 380px;
-    margin: 0 auto;
-    height: 640px;
+ .u-card {
+    width: calc(50% - 20px) !important;
+    height: auto !important;
   }
 
   .card1 .m-bottom {
@@ -682,11 +681,10 @@
     align-items: center;
   }
 
-  .u-card {
-    width: 100% !important;
-    max-width: 350px !important;
+.u-card {
+    width: 100% !important; 
+    max-width: 100% !important;
     height: auto !important;
-    margin: 0 0 25px 0 !important;
   }
 
   .upper-part,
