@@ -114,9 +114,7 @@
   flex-flow: column wrap;
 }
 
-.collapse {
-  position: static !important;
-}
+
 
 .faq-btn {
   border: none;
