@@ -147,6 +147,7 @@ const searchIndex = [
   },
 ];
 
+
 // Get path back to project root
 function getRootPrefix() {
   const pathParts = window.location.pathname
