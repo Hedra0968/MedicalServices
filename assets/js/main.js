@@ -52,20 +52,6 @@ if (navMenu) {
 }
 
 // Site Search
-// "page" values are written relative to the PROJECT ROOT (where index.html
-// and the "html" folder both live). ROOT_PREFIX is worked out automatically
-// below from the src="" this very script was loaded with, so it resolves
-// correctly whether the current page is one level deep (html/about.html)
-// or two levels deep (html/services-details/xyz.html).
-function getRootPrefix() {
-  const src = document.currentScript ? document.currentScript.getAttribute("src") || "" : "";
-  const marker = "assets/js/";
-  const idx = src.indexOf(marker);
-  return idx >= 0 ? src.slice(0, idx) : "";
-}
-
-const ROOT_PREFIX = getRootPrefix();
-
 const searchIndex = [
   {
     keywords: ["home", "medstar", "hospital"],
@@ -168,15 +154,14 @@ function performSearch(query) {
   const match = searchIndex.find((item) =>
     item.keywords.some((k) => k.includes(q) || q.includes(k)),
   );
+  const currentFile = location.pathname.split("/").pop() || "index.html";
   if (!match) {
     alert(
       `No results found for "${query}". Try: About, Services, Doctors, Blogs, Contact, Price List, Login.`,
     );
     return;
   }
-  const currentFileName = location.pathname.split("/").pop() || "index.html";
-  const targetFileName = match.page.split("/").pop();
-  if (targetFileName === currentFileName) {
+  if (match.page === currentFile) {
     if (match.hash) {
       const el = document.getElementById(match.hash);
       if (el) el.scrollIntoView({ behavior: "smooth" });
@@ -184,8 +169,7 @@ function performSearch(query) {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
   } else {
-    window.location.href =
-      ROOT_PREFIX + match.page + (match.hash ? "#" + match.hash : "");
+    window.location.href = match.page + (match.hash ? "#" + match.hash : "");
   }
 }
 

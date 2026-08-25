@@ -147,7 +147,6 @@ const searchIndex = [
   },
 ];
 
-
 // Get path back to project root
 function getRootPrefix() {
   const pathParts = window.location.pathname
@@ -318,7 +317,6 @@ if (backToTop) {
     });
   });
 }
-
 // PWA: register service worker (index.js always runs from the project root)
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("sw.js").catch(() => {});
