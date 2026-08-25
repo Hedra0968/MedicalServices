@@ -317,8 +317,3 @@ if (backToTop) {
     });
   });
 }
-
-// PWA: register service worker (index.js always runs from the project root)
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("sw.js").catch(() => {});
-}
