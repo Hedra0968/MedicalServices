@@ -50,17 +50,6 @@ if (navMenu) {
   });
 }
 
-
-function getRootPrefix() {
-  const src = document.currentScript ? document.currentScript.getAttribute("src") || "" : "";
-  const marker = "assets/js/";
-  const idx = src.indexOf(marker);
-  return idx >= 0 ? src.slice(0, idx) : "";
-}
-
-const ROOT_PREFIX = getRootPrefix();
-
-
 // Site Search Index
 const searchIndex = [
   {
@@ -71,7 +60,7 @@ const searchIndex = [
   },
   {
     keywords: ["about", "who we are", "about us"],
-    page: "html/about.html",
+    page: "about.html",
     hash: "",
     label: "About Us",
   },
@@ -89,7 +78,7 @@ const searchIndex = [
       "vision",
       "blood",
     ],
-    page: "html/services.html",
+    page: "services.html",
     hash: "",
     label: "Services",
   },
@@ -106,7 +95,7 @@ const searchIndex = [
     ],
     page: "doctors.html",
     hash: "",
-    label: "html/Doctors",
+    label: "Doctors",
   },
   {
     keywords: ["blogs", "blog", "news", "checkup", "health tips"],
