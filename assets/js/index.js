@@ -60,7 +60,7 @@ const searchIndex = [
   },
   {
     keywords: ["about", "who we are", "about us"],
-    page: "about.html",
+    page: "html/about.html",
     hash: "",
     label: "About Us",
   },
@@ -78,7 +78,7 @@ const searchIndex = [
       "vision",
       "blood",
     ],
-    page: "services.html",
+    page: "html/services.html",
     hash: "",
     label: "Services",
   },
@@ -95,7 +95,7 @@ const searchIndex = [
     ],
     page: "doctors.html",
     hash: "",
-    label: "Doctors",
+    label: "html/Doctors",
   },
   {
     keywords: ["blogs", "blog", "news", "checkup", "health tips"],
