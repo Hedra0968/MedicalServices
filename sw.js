@@ -1,4 +1,4 @@
-const CACHE_NAME = "medical-services-cache-v2";
+const CACHE_NAME = "medical-services-cache-v3";
 const urlsToCache = ["index.html", "assets/css/style.css", "assets/js/index.js"];
 
 self.addEventListener("install", (e) => {

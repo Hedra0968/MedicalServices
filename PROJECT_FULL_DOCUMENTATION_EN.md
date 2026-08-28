@@ -105,13 +105,31 @@ function handleNavScroll() {
 
 ---
 
-## 7. Site Search — and how its routing bug was fixed
+## 7. Site Search — and the two routing bugs that were fixed
 
 **The idea:** a search box that takes a keyword and decides whether to scroll to a section on the current page, or navigate to a different page entirely.
 
-**The bug that existed:** since `index.html` lives at the root while every other page lives inside `html/`, any hardcoded path (e.g. `"about.html"` with no prefix) would break whenever searching from a page at a different folder depth than expected.
+### Bug #1 — hardcoded folder depth
+Since `index.html` lives at the root while every other page lives inside `html/`, any hardcoded path (e.g. `"about.html"` with no prefix) would break whenever searching from a page at a different folder depth than expected.
 
-**The final fix, applied in `main.js`:**
+**The fix, applied in `main.js`:**
+```js
+function getRootPrefix() {
+  const src = document.currentScript ? document.currentScript.getAttribute("src") || "" : "";
+  const marker = "assets/js/";
+  const idx = src.indexOf(marker);
+  return idx >= 0 ? src.slice(0, idx) : "";
+}
+
+const ROOT_PREFIX = getRootPrefix();
+```
+The code reads the exact path it was loaded with (`<script src="../assets/js/main.js">` or `<script src="../../assets/js/main.js">`), and automatically figures out "how far am I from the project root" — no need to hardcode a path that changes per page.
+
+### Bug #2 — counting URL slashes instead of reading the script's own path
+`index.js` originally used a *different* technique: it counted the number of `/` in `window.location.pathname` to guess its depth. This works fine when a site is served from a domain's true root, but **breaks specifically on GitHub Pages project sites**, because the URL there looks like `https://username.github.io/RepoName/index.html` — the repo name (`RepoName`) becomes an extra path segment that gets miscounted as if it were a real project folder. That extra miscounted level added one unnecessary `../` to every link generated from the Home page, sending visitors **outside the project entirely** (landing on the bare `github.io` domain, where GitHub shows a "There isn't a GitHub Pages site here" error — a different, more confusing 404 than a normal missing-file error).
+
+**The fix:** `index.js` now uses the exact same `document.currentScript`-based technique as `main.js`, reading its own `<script src="./assets/js/index.js">` attribute instead of counting URL slashes — completely unaffected by whatever prefix a hosting provider adds to the URL.
+
 ```js
 function getRootPrefix() {
   const src = document.currentScript ? document.currentScript.getAttribute("src") || "" : "";
@@ -123,14 +141,12 @@ function getRootPrefix() {
 const ROOT_PREFIX = getRootPrefix();
 ```
 
-**Explanation:** the code reads the exact path it was loaded with (`<script src="../assets/js/main.js">` or `<script src="../../assets/js/main.js">`), and automatically figures out "how far am I from the project root" — so there's no need to hardcode a path that changes per page, and no need to know in advance whether the current page is inside `html/` or `html/services-details/`; the code adapts itself.
+**Important implementation detail:** `document.currentScript` is only valid while a script is first executing — it becomes `null` once code runs later inside an event handler (like a search form's `submit` listener). That's why `ROOT_PREFIX` is computed **once, at the top level**, right when the script loads, and the stored value is reused every time a search happens — rather than calling `getRootPrefix()` again from inside `performSearch()`.
 
 Every entry in `searchIndex` is written as a path **relative to the project root** (e.g. `"html/about.html"`), and when navigating:
 ```js
 window.location.href = ROOT_PREFIX + match.page + (match.hash ? "#" + match.hash : "");
 ```
-
-`index.js` (used only by the home page) has a simpler version, since it's always at a fixed depth (the root), and just prepends `html/` manually to any non-home page.
 
 ---
 
@@ -262,7 +278,7 @@ The site is now installable on mobile and desktop like a real app, using the sit
 
 **Manifest (`manifest.json`)** describes the app's name, icons, theme color, and start page. **Service Worker (`sw.js`)** caches the core files so the app loads instantly on repeat visits.
 
-**Important gotcha (learned the hard way):** a Service Worker aggressively caches files in the visitor's browser. If `sw.js` isn't written to self-update, visitors (including you, while testing) can keep seeing an **old, frozen version of the site** even after the real files on GitHub have been fixed — because the browser is silently serving its own cached copy instead of fetching the new one. This is exactly what caused the search feature to look "completely broken" during testing, even though the actual deployed code was correct.
+**Important gotcha (learned the hard way):** a Service Worker aggressively caches files in the visitor's browser. If `sw.js` isn't written to self-update, visitors (including you, while testing) can keep seeing an **old, frozen version of the site** even after the real files on GitHub have been fixed — because the browser is silently serving its own cached copy instead of fetching the new one.
 
 The current `sw.js` avoids this with three additions:
 ```js

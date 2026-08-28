@@ -147,21 +147,22 @@ const searchIndex = [
   },
 ];
 
-// Get path back to project root
+// Get path back to project root by reading the src="" this very script was
+// loaded with (e.g. "./assets/js/index.js"), instead of counting slashes in
+// the URL. Counting URL slashes breaks on GitHub Pages project sites, since
+// the repo name itself (e.g. "/MedicalServices/") becomes an extra segment
+// in window.location.pathname that isn't a real project folder.
+// IMPORTANT: this must run immediately (top-level), because
+// document.currentScript is only valid while the script first executes —
+// it becomes null once we're inside a later event handler like a form submit.
 function getRootPrefix() {
-  const pathParts = window.location.pathname
-    .split("/")
-    .filter(Boolean);
-
-  // Remove current HTML file
-  if (pathParts.length > 0) {
-    pathParts.pop();
-  }
-
-  return "../".repeat(
-    pathParts.filter((part) => part !== "").length
-  );
+  const src = document.currentScript ? document.currentScript.getAttribute("src") || "" : "";
+  const marker = "assets/js/";
+  const idx = src.indexOf(marker);
+  return idx >= 0 ? src.slice(0, idx) : "";
 }
+
+const ROOT_PREFIX = getRootPrefix();
 
 function performSearch(query) {
   const q = query.trim().toLowerCase();
@@ -181,16 +182,14 @@ function performSearch(query) {
     return;
   }
 
-  const rootPrefix = getRootPrefix();
-
   let targetUrl;
 
   // Home page is in project root
   if (match.page === "index.html") {
-    targetUrl = `${rootPrefix}index.html`;
+    targetUrl = `${ROOT_PREFIX}index.html`;
   } else {
     // Other main pages are inside html folder
-    targetUrl = `${rootPrefix}html/${match.page}`;
+    targetUrl = `${ROOT_PREFIX}html/${match.page}`;
   }
 
   if (match.hash) {
