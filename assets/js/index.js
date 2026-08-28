@@ -60,7 +60,7 @@ const searchIndex = [
   },
   {
     keywords: ["about", "who we are", "about us"],
-    page: "about.html",
+    page: "../../html/about.html",
     hash: "",
     label: "About Us",
   },
