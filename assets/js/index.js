@@ -50,6 +50,17 @@ if (navMenu) {
   });
 }
 
+
+function getRootPrefix() {
+  const src = document.currentScript ? document.currentScript.getAttribute("src") || "" : "";
+  const marker = "assets/js/";
+  const idx = src.indexOf(marker);
+  return idx >= 0 ? src.slice(0, idx) : "";
+}
+
+const ROOT_PREFIX = getRootPrefix();
+
+
 // Site Search Index
 const searchIndex = [
   {
